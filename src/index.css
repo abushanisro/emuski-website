@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+    :root {
+        /* Neutral Foundation */
+        --background: 0 0% 98%;
+        /* #fafafa */
+        --foreground: 220 39% 11%;
+        /* #111827 - Dark Text */
+
+        --card: 0 0% 100%;
+        /* #ffffff - Card Background */
+        --card-foreground: 220 39% 11%;
+        /* #111827 */
+
+        --popover: 0 0% 100%;
+        --popover-foreground: 220 39% 11%;
+
+        /* Primary Brand Colors */
+        --primary: 181 66% 59%;
+        /* #4fd3d4 - EMUSKI Teal */
+        --primary-foreground: 0 0% 100%;
+
+        --secondary: 220 13% 91%;
+        /* #e5e7eb - Border Gray */
+        --secondary-foreground: 220 39% 11%;
+
+        --muted: 220 13% 91%;
+        --muted-foreground: 220 9% 46%;
+        /* #6b7280 - Text Gray */
+
+        --accent: 181 66% 59%;
+        /* EMUSKI Teal for accents */
+        --accent-foreground: 0 0% 100%;
+
+        /* System Colors */
+        --destructive: 0 84% 60%;
+        /* #ef4444 - Error */
+        --destructive-foreground: 0 0% 98%;
+
+        --border: 220 13% 91%;
+        /* #e5e7eb - Border Gray */
+        --input: 220 13% 91%;
+        --ring: 181 66% 59%;
+        /* EMUSKI Teal */
+
+        --radius: 0.5rem;
+
+        /* EMUSKI Brand Colors */
+        --emuski-teal: 181 66% 59%;
+        /* #4fd3d4 - Primary brand color */
+        --emuski-teal-light: 181 66% 69%;
+        /* #6ee1e2 - Teal Light */
+        --emuski-teal-dark: 181 66% 49%;
+        /* #3bc5c6 - Teal Dark */
+        --emuski-teal-darker: 181 66% 35%;
+        /* #2a8d8f - Much darker teal for better contrast on white */
+
+        /* Dark & Industrial Colors */
+        --emuski-dark: 210 30% 18%;
+        /* #2d3849 - EMUSKI Dark */
+        --hero-background: 210 25% 16%;
+        /* #2a3441 - Hero Background */
+        --industrial-dark: 210 30% 10%;
+        /* #1a222d - Industrial Dark */
+
+        /* Neutral Foundation (duplicated for clarity) */
+        --text-gray: 220 9% 46%;
+        /* #6b7280 - Secondary text */
+        --border-gray: 220 13% 91%;
+        /* #e5e7eb - Subtle borders */
+        --dark-text: 220 39% 11%;
+        /* #111827 - Primary text */
+
+        /* Accent & System Colors */
+        --grid-line: 181 20% 30%;
+        /* #4d7c7d - Grid patterns */
+        --success: 160 84% 39%;
+        /* #10b981 - Success */
+        --warning: 43 96% 50%;
+        /* #f59e0b - Warning */
+        --error: 0 84% 60%;
+        /* #ef4444 - Error */
+
+        /* Legacy compatibility (keeping for existing components) */
+        --industrial-blue: 181 66% 59%;
+        --industrial-blue-light: 181 66% 69%;
+        --industrial-gray: 220 9% 46%;
+        --tech-green: 181 66% 59%;
+        --tech-green-dark: 181 66% 49%;
+        --tech-black: 210 30% 10%;
+        --tech-gray: 220 9% 46%;
+        --tech-light-gray: 220 13% 91%;
+
+        --sidebar-background: 0 0% 98%;
+        --sidebar-foreground: 220 39% 11%;
+        --sidebar-primary: 220 39% 11%;
+        --sidebar-primary-foreground: 0 0% 98%;
+        --sidebar-accent: 220 13% 91%;
+        --sidebar-accent-foreground: 220 39% 11%;
+        --sidebar-border: 220 13% 91%;
+        --sidebar-ring: 181 66% 59%;
+    }
+
+    .dark {
+        /* Dark Mode - Using Industrial Dark colors */
+        --background: 210 30% 10%;
+        /* #1a222d - Industrial Dark */
+        --foreground: 0 0% 98%;
+
+        --card: 210 30% 18%;
+        /* #2d3849 - EMUSKI Dark */
+        --card-foreground: 0 0% 98%;
+
+        --popover: 210 30% 18%;
+        --popover-foreground: 0 0% 98%;
+
+        --primary: 181 66% 59%;
+        /* #4fd3d4 - EMUSKI Teal */
+        --primary-foreground: 0 0% 100%;
+
+        --secondary: 210 25% 16%;
+        /* #2a3441 - Hero Background */
+        --secondary-foreground: 0 0% 98%;
+
+        --muted: 210 25% 16%;
+        --muted-foreground: 220 9% 46%;
+        /* #6b7280 */
+
+        --accent: 181 66% 59%;
+        --accent-foreground: 0 0% 100%;
+
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 0 0% 98%;
+
+        --border: 210 25% 25%;
+        --input: 210 25% 25%;
+        --ring: 181 66% 59%;
+
+        --sidebar-background: 210 30% 10%;
+        --sidebar-foreground: 0 0% 98%;
+        --sidebar-primary: 181 66% 59%;
+        --sidebar-primary-foreground: 0 0% 100%;
+        --sidebar-accent: 210 25% 16%;
+        --sidebar-accent-foreground: 0 0% 98%;
+        --sidebar-border: 210 25% 25%;
+        --sidebar-ring: 181 66% 59%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+    }
+}

@@ -1,0 +1,26 @@
+# EMUSKI Manufacturing - Robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://emuski.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Allow crawling of brand assets
+Allow: /src/assets/
+Allow: /favicon.svg
+
+# Manufacturing and OEM focused content
+Allow: /logo
+Allow: /typography
+Allow: /color
+Allow: /art-direction
+Allow: /brand
+
+# Block any development or temporary files
+Disallow: /node_modules/
+Disallow: /dist/
+Disallow: /.vite/
+Disallow: *.log
