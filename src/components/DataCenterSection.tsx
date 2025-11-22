@@ -14,7 +14,7 @@ const serviceItems = [
     link: "/blog"
   },
   {
-    category: "Engineering Services", 
+    category: "Engineering Services",
     title: "VAVE - Teardown & Benchmarking",
     description: "Comprehensive analysis identifying cost reduction opportunities through detailed teardown and benchmarking studies.",
     fullDescription: "VAVE methodology helping OEMs refine designs, enhance competitiveness, and maximize product value through comprehensive teardown analysis and competitive benchmarking.",
@@ -23,7 +23,7 @@ const serviceItems = [
   },
   {
     category: "Engineering Services",
-    title: "Strategic Sourcing Support", 
+    title: "Strategic Sourcing Support",
     description: "End-to-end sourcing solutions connecting OEMs with reliable, cost-effective quality suppliers.",
     fullDescription: "Strengthening supply chain resilience and reducing procurement risks through comprehensive supplier evaluation, strategic partnerships, and end-to-end sourcing assistance.",
     image: "https://images.unsplash.com/photo-1566207474742-de921626ad0c?w=400&q=80",
@@ -59,7 +59,7 @@ const serviceItems = [
     category: "Next-Gen AI",
     title: "Mithran AI Platform",
     description: "AI-powered platform delivering 30% faster sourcing cycles and 15% cost savings for OEMs.",
-    fullDescription: "Next-generation AI-driven engineering platform acting as digital backbone for OEMs, transforming workflows into smart ecosystems with 30% faster sourcing and 15% cost savings."
+    fullDescription: "Next-generation AI-driven engineering platform acting as digital backbone for OEMs, transforming workflows into smart ecosystems with 30% faster sourcing and 15% cost savings.",
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&q=80",
     link: "/blog"
   }
@@ -82,8 +82,8 @@ export const DataCenterSection = () => {
   };
 
   const toggleExpanded = (index: number) => {
-    setExpandedItems(prev => 
-      prev.includes(index) 
+    setExpandedItems(prev =>
+      prev.includes(index)
         ? prev.filter(i => i !== index)
         : [...prev, index]
     );
@@ -96,196 +96,167 @@ export const DataCenterSection = () => {
   return (
     <>
       {/* Separator */}
-      <div className="separator-spacer">
-        <style jsx>{`
-          .separator-spacer {
-            height: 60px;
-          }
-          
-          @media screen and (min-width: 1350px) {
-            .separator-spacer {
-              height: 60px;
-            }
-          }
-          
-          @media screen and (min-width: 1024px) and (max-width: 1349px) {
-            .separator-spacer {
-              height: 60px;
-            }
-          }
-          
-          @media screen and (min-width: 640px) and (max-width: 1023px) {
-            .separator-spacer {
-              height: 60px;
-            }
-          }
-          
-          @media screen and (max-width: 639px) {
-            .separator-spacer {
-              height: 60px;
-            }
-          }
-        `}</style>
-      </div>
+      {/* Separator */}
+      <div className="h-[60px]"></div>
 
       <section className="py-16 bg-secondary/30">
         <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
-          {/* Left Side - Title and Description */}
-          <div className="lg:col-span-1 space-y-4">
-            <h2 className="text-3xl font-bold text-foreground">
-              Our Services
-            </h2>
-            <p className="text-muted-foreground leading-relaxed">
-              Comprehensive engineering and manufacturing solutions designed to drive product value, cost optimization, and supply chain excellence through deep expertise and advanced technology.
-            </p>
-            <div className="pt-4 space-y-3">
-              {/* Quick Links Dropdown */}
-              <div className="relative">
-                <button
-                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  className="inline-flex items-center text-emuski-teal font-medium text-sm hover:text-emuski-teal/80 transition-colors"
-                >
-                  <ChevronDown className={`h-4 w-4 mr-2 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
-                  Quick Links
-                </button>
-                
-                {isDropdownOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-80 bg-card border border-border rounded-lg shadow-lg z-40">
-                    <div className="p-4 space-y-4">
-                      {/* Engineering Services */}
-                      <div>
-                        <h4 className="text-sm font-semibold text-emuski-teal mb-2">Engineering Services</h4>
-                        <ul className="space-y-1">
-                          {serviceItems
-                            .filter(item => item.category === "Engineering Services")
-                            .map((item, index) => (
-                              <li key={index}>
-                                <a
-                                  href={item.link}
-                                  className="text-xs text-muted-foreground hover:text-foreground transition-colors block py-1"
-                                >
-                                  {item.title}
-                                </a>
-                              </li>
-                            ))}
-                        </ul>
-                      </div>
-                      
-                      {/* Manufacturing Services */}
-                      <div>
-                        <h4 className="text-sm font-semibold text-emuski-teal mb-2">Manufacturing Services</h4>
-                        <ul className="space-y-1">
-                          {serviceItems
-                            .filter(item => item.category === "Manufacturing Services")
-                            .map((item, index) => (
-                              <li key={index}>
-                                <a
-                                  href={item.link}
-                                  className="text-xs text-muted-foreground hover:text-foreground transition-colors block py-1"
-                                >
-                                  {item.title}
-                                </a>
-                              </li>
-                            ))}
-                        </ul>
-                      </div>
-                      
-                      {/* Next-Gen AI */}
-                      <div>
-                        <h4 className="text-sm font-semibold text-emuski-teal mb-2">Next-Gen AI</h4>
-                        <ul className="space-y-1">
-                          {serviceItems
-                            .filter(item => item.category === "Next-Gen AI")
-                            .map((item, index) => (
-                              <li key={index}>
-                                <a
-                                  href={item.link}
-                                  className="text-xs text-muted-foreground hover:text-foreground transition-colors block py-1 flex items-center justify-between"
-                                >
-                                  <span>{item.title}</span>
-                                  <span className="bg-orange-100 text-orange-600 px-1.5 py-0.5 rounded text-[10px] font-medium ml-2">BETA</span>
-                                </a>
-                              </li>
-                            ))}
-                        </ul>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+            {/* Left Side - Title and Description */}
+            <div className="lg:col-span-1 space-y-4">
+              <h2 className="text-3xl font-bold text-foreground">
+                Our Services
+              </h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Comprehensive engineering and manufacturing solutions designed to drive product value, cost optimization, and supply chain excellence through deep expertise and advanced technology.
+              </p>
+              <div className="pt-4 space-y-3">
+                {/* Quick Links Dropdown */}
+                <div className="relative">
+                  <button
+                    onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                    className="inline-flex items-center text-emuski-teal font-medium text-sm hover:text-emuski-teal/80 transition-colors"
+                  >
+                    <ChevronDown className={`h-4 w-4 mr-2 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
+                    Quick Links
+                  </button>
+
+                  {isDropdownOpen && (
+                    <div className="absolute top-full left-0 mt-2 w-80 bg-card border border-border rounded-lg shadow-lg z-40">
+                      <div className="p-4 space-y-4">
+                        {/* Engineering Services */}
+                        <div>
+                          <h4 className="text-sm font-semibold text-emuski-teal mb-2">Engineering Services</h4>
+                          <ul className="space-y-1">
+                            {serviceItems
+                              .filter(item => item.category === "Engineering Services")
+                              .map((item, index) => (
+                                <li key={index}>
+                                  <a
+                                    href={item.link}
+                                    className="text-xs text-muted-foreground hover:text-foreground transition-colors block py-1"
+                                  >
+                                    {item.title}
+                                  </a>
+                                </li>
+                              ))}
+                          </ul>
+                        </div>
+
+                        {/* Manufacturing Services */}
+                        <div>
+                          <h4 className="text-sm font-semibold text-emuski-teal mb-2">Manufacturing Services</h4>
+                          <ul className="space-y-1">
+                            {serviceItems
+                              .filter(item => item.category === "Manufacturing Services")
+                              .map((item, index) => (
+                                <li key={index}>
+                                  <a
+                                    href={item.link}
+                                    className="text-xs text-muted-foreground hover:text-foreground transition-colors block py-1"
+                                  >
+                                    {item.title}
+                                  </a>
+                                </li>
+                              ))}
+                          </ul>
+                        </div>
+
+                        {/* Next-Gen AI */}
+                        <div>
+                          <h4 className="text-sm font-semibold text-emuski-teal mb-2">Next-Gen AI</h4>
+                          <ul className="space-y-1">
+                            {serviceItems
+                              .filter(item => item.category === "Next-Gen AI")
+                              .map((item, index) => (
+                                <li key={index}>
+                                  <a
+                                    href={item.link}
+                                    className="text-xs text-muted-foreground hover:text-foreground transition-colors block py-1 flex items-center justify-between"
+                                  >
+                                    <span>{item.title}</span>
+                                    <span className="bg-orange-100 text-orange-600 px-1.5 py-0.5 rounded text-[10px] font-medium ml-2">BETA</span>
+                                  </a>
+                                </li>
+                              ))}
+                          </ul>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
-
-          {/* Right Side - Carousel and Navigation */}
-          <div className="lg:col-span-2">
-            {/* Navigation Arrows */}
-            <div className="flex justify-end mb-4">
-              <div className="flex space-x-2">
-                <Button
-                  onClick={prevSlide}
-                  disabled={currentIndex === 0}
-                  variant="outline"
-                  size="icon"
-                  className="h-10 w-10 bg-emuski-teal hover:bg-emuski-teal/90 text-white border-emuski-teal disabled:opacity-50"
-                >
-                  <ChevronUp className="h-4 w-4 rotate-[-90deg]" />
-                </Button>
-                <Button
-                  onClick={nextSlide}
-                  disabled={currentIndex === maxIndex}
-                  variant="outline"
-                  size="icon"
-                  className="h-10 w-10 bg-emuski-teal hover:bg-emuski-teal/90 text-white border-emuski-teal disabled:opacity-50"
-                >
-                  <ChevronUp className="h-4 w-4 rotate-[90deg]" />
-                </Button>
+                  )}
+                </div>
               </div>
             </div>
 
-            {/* Carousel Container */}
-            <div className="overflow-hidden">
-              <div 
-                className="flex transition-transform duration-300 ease-in-out"
-                style={{ transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)` }}
-              >
-                {serviceItems.map((item, index) => (
-                  <div key={index} className="w-full flex-shrink-0 px-3" style={{ width: `${100 / itemsPerView}%` }}>
-                    <Card className="group overflow-hidden bg-white border-gray-200 hover:border-emuski-teal/50 transition-all duration-300 h-full">
-                      <a href={item.link} className="block h-full hover:no-underline">
-                        <div className="relative h-48 overflow-hidden">
-                          <img
-                            src={item.image}
-                            alt={item.title}
-                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                          />
-                        </div>
-                        
-                        <div className="p-4">
-                          <div className="flex items-center space-x-2 mb-3">
-                            <span className="text-xs font-medium text-gray-700 uppercase tracking-wider">{item.category}</span>
-                            <span className="text-gray-300">|</span>
-                            <span className="text-xs font-medium text-gray-700 uppercase tracking-wider">Service</span>
+            {/* Right Side - Carousel and Navigation */}
+            <div className="lg:col-span-2">
+              {/* Navigation Arrows */}
+              <div className="flex justify-end mb-4">
+                <div className="flex space-x-2">
+                  <Button
+                    onClick={prevSlide}
+                    disabled={currentIndex === 0}
+                    variant="outline"
+                    size="icon"
+                    className="h-10 w-10 bg-emuski-teal hover:bg-emuski-teal/90 text-white border-emuski-teal disabled:opacity-50"
+                  >
+                    <ChevronUp className="h-4 w-4 rotate-[-90deg]" />
+                  </Button>
+                  <Button
+                    onClick={nextSlide}
+                    disabled={currentIndex === maxIndex}
+                    variant="outline"
+                    size="icon"
+                    className="h-10 w-10 bg-emuski-teal hover:bg-emuski-teal/90 text-white border-emuski-teal disabled:opacity-50"
+                  >
+                    <ChevronUp className="h-4 w-4 rotate-[90deg]" />
+                  </Button>
+                </div>
+              </div>
+
+              {/* Carousel Container */}
+              <div className="overflow-hidden">
+                <div
+                  className="flex transition-transform duration-300 ease-in-out"
+                  style={{ transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)` }}
+                >
+                  {serviceItems.map((item, index) => (
+                    <div key={index} className="w-full flex-shrink-0 px-3" style={{ width: `${100 / itemsPerView}%` }}>
+                      <Card className="group overflow-hidden bg-white border-gray-200 hover:border-emuski-teal/50 transition-all duration-300 h-full">
+                        <a href={item.link} className="block h-full hover:no-underline">
+                          <div className="relative h-48 overflow-hidden">
+                            <img
+                              src={item.image}
+                              alt={item.title}
+                              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            />
                           </div>
-                          
-                          <h3 className="text-lg font-bold text-gray-900 mb-2 leading-tight">
-                            {item.title}
-                          </h3>
-                          
-                          <p className="text-sm text-gray-600 leading-relaxed">
-                            {item.description}
-                          </p>
-                        </div>
-                      </a>
-                    </Card>
-                  </div>
-                ))}
+
+                          <div className="p-4">
+                            <div className="flex items-center space-x-2 mb-3">
+                              <span className="text-xs font-medium text-gray-700 uppercase tracking-wider">{item.category}</span>
+                              <span className="text-gray-300">|</span>
+                              <span className="text-xs font-medium text-gray-700 uppercase tracking-wider">Service</span>
+                            </div>
+
+                            <h3 className="text-lg font-bold text-gray-900 mb-2 leading-tight">
+                              {item.title}
+                            </h3>
+
+                            <p className="text-sm text-gray-600 leading-relaxed">
+                              {item.description}
+                            </p>
+                          </div>
+                        </a>
+                      </Card>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
     </>
   );
 };

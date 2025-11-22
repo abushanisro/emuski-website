@@ -30,15 +30,15 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/autonomous-machines" element={<AutonomousMachines />} />
           <Route path="/industries" element={<Industries />} />
-          {/* <Route path="/solutions/ai" element={<AISolutions />} /> */}
-          {/* <Route path="/manufacturing-services" element={<ManufacturingServices />} /> */}
-          {/* <Route path="/precision-engineering" element={<PrecisionEngineering />} /> */}
-          {/* <Route path="/blog" element={<Blog />} /> */}
-          {/* <Route path="/blog/:slug" element={<BlogPost />} /> */}
-          {/* <Route path="/gallery" element={<Gallery />} /> */}
-          {/* <Route path="/capabilities" element={<Capabilities />} /> */}
-          {/* <Route path="/contact" element={<Contact />} /> */}
-          {/* <Route path="/admin/subscribers" element={<SubscriberDashboard />} /> */}
+          <Route path="/solutions/ai" element={<AISolutions />} />
+          <Route path="/manufacturing-services" element={<ManufacturingServices />} />
+          <Route path="/precision-engineering" element={<PrecisionEngineering />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/capabilities" element={<Capabilities />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/admin/subscribers" element={<SubscriberDashboard />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
