@@ -29,7 +29,7 @@ const slides: Slide[] = [
     link: "/manufacturing-services",
   },
   {
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80",
     category: "Next-Gen AI - Mithran",
     title: "Next-Gen AI - Mithran",
     shortTitle: "NextGen AI",
