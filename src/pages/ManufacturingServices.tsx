@@ -5,7 +5,7 @@ const services = [
   {
     title: "OEM Manufacturing",
     description: "Complete manufacturing solutions from concept to production, ensuring quality and precision at every step.",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80",
+    image: "/src/assets/componets/Matica Photos2/DSC_1008.JPG",
     features: [
       "End-to-end manufacturing process",
       "Quality control and assurance",
@@ -16,7 +16,7 @@ const services = [
   {
     title: "Custom Manufacturing",
     description: "Tailored manufacturing services meeting your specific requirements and quality standards.",
-    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&q=80",
+    image: "/src/assets/componets/Part - Photos/IMG-20250206-WA0025.jpg",
     features: [
       "Custom design solutions",
       "Flexible production volumes",
@@ -27,7 +27,7 @@ const services = [
   {
     title: "Rapid Prototyping",
     description: "Fast and efficient prototyping services to bring your designs to life quickly.",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80",
+    image: "/src/assets/componets/forus/WhatsApp Image 2025-08-23 at 10.06.37 PM.jpeg",
     features: [
       "Quick turnaround times",
       "Multiple material options",
@@ -38,7 +38,7 @@ const services = [
   {
     title: "Production Scaling",
     description: "Seamless scaling from prototype to full production with optimized processes.",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80",
+    image: "/src/assets/componets/3.Oct 25/cent_fixture/WhatsApp Image 2025-10-27 at 3.21.23 PM.jpeg",
     features: [
       "Production optimization",
       "Supply chain management",
@@ -85,7 +85,6 @@ export default function ManufacturingServices() {
                     alt={service.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                 </div>
                 
                 <div className="p-6 space-y-4">

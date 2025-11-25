@@ -61,11 +61,21 @@ const AboutSection = () => {
                     {/* Left Side - Title and Description */}
                     <div className="lg:col-span-1 space-y-4">
                         <h2 className="text-3xl font-bold text-white">
-                            About EMUSKI
+                            About EMuski
                         </h2>
                         <p className="text-gray-300 leading-relaxed">
-                            One Stop Solution for OEM Manufacturing - delivering precision engineering and manufacturing excellence to bring your designs to life with unmatched quality and innovation.
+                            At EMuski, we are shaping the future of manufacturing by combining engineering expertise, manufacturing expertise, and AI-driven excellence. Our unique strengths that we have put in the intersection of innovation, intelligence, and implementation—directly serving OEMs. Our New Product Development (NPD) Center integrates design, engineering, and in-house production, enabling faster prototyping to solutions, self-controlled product launches. This holistic approach ensures OEMs to move from concept to market with confidence and agility.
                         </p>
+                        <div className="mt-6 p-4 bg-gray-800/30 rounded-lg border border-emuski-teal/20">
+                            <h4 className="text-lg font-semibold text-emuski-teal mb-3">Technology-Driven Engineering, Manufacturing & Digital Excellence</h4>
+                            <p className="text-sm text-gray-300 italic mb-3">"Empowering OEMs with intelligence, agility, and precision across the product lifecycle"</p>
+                            <p className="text-sm text-gray-300 leading-relaxed">
+                                At EMuski, we combine engineering expertise, manufacturing mastery, and AI-driven digital innovation to support OEMs at every stage of their manufacturing lifecycle. Our services includes from design engineering to end-to-end value, cost efficiency, and speed to market.
+                            </p>
+                            <div className="mt-4 text-center">
+                                <p className="text-sm text-emuski-teal font-medium">"At EMuski, where cost and quality meets profitability in manufacturing"</p>
+                            </div>
+                        </div>
                     </div>
 
                     {/* Right Side - Carousel and Navigation */}

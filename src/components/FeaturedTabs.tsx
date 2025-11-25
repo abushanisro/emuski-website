@@ -5,63 +5,63 @@ import { Button } from "./ui/button";
 
 const featuredContent = [
   {
-    id: "ai-models",
-    label: "AI Models",
+    id: "engineering",
+    label: "Engineering",
     items: [
       {
-        category: "Generative AI",
-        title: "Open-Source AI Models Transform Research",
-        description: "Introducing breakthrough models designed to accelerate AI innovation across language processing, molecular biology, and autonomous systems.",
-        image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80"
+        category: "Precision Engineering",
+        title: "Automotive OEM Partnership Excellence",
+        description: "EMuski's precision engineering team delivered critical transmission components for a leading automotive OEM, achieving 99.8% quality standards while reducing production time by 25%.",
+        image: "/src/assets/componets/Part - Photos/IMG-20250310-WA0011.jpg"
       },
       {
-        category: "Deep Learning",
-        title: "Neural Architecture Advances Computer Vision",
-        description: "Next-generation neural networks achieving unprecedented accuracy in real-time image recognition and analysis.",
-        image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&q=80"
+        category: "Design & Validation",
+        title: "Aerospace Innovation Partnership",
+        description: "Our engineering excellence enabled a major aerospace client to launch their next-generation aircraft component 6 months ahead of schedule through collaborative design optimization.",
+        image: "/src/assets/componets/forus/WhatsApp Image 2025-08-23 at 10.06.37 PM.jpeg"
       }
     ]
   },
   {
-    id: "computing",
-    label: "Computing",
+    id: "manufacturing",
+    label: "Manufacturing",
     items: [
       {
-        category: "HPC",
-        title: "Supercomputing Centers Adopt Next-Gen Architecture",
-        description: "Leading research facilities worldwide deploy advanced computing infrastructure for scientific breakthroughs in climate, physics, and medicine.",
-        image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80"
+        category: "Production",
+        title: "Manufacturing Scale-Up Success Story",
+        description: "EMuski partnered with an industrial equipment manufacturer to scale production from 100 to 10,000 units monthly, maintaining zero-defect quality while reducing per-unit costs by 30%.",
+        image: "/src/assets/componets/Matica Photos2/DSC_1008.JPG"
       },
       {
-        category: "Data Centers",
-        title: "Energy-Efficient Computing at Scale",
-        description: "Revolutionary cooling and power management systems reduce data center energy consumption by 40% while increasing performance.",
-        image: "https://images.unsplash.com/photo-1639322537228-f710d846310a?w=800&q=80"
+        category: "Quality Assurance",
+        title: "Medical Device Quality Excellence",
+        description: "Our advanced quality systems helped a medical device client achieve FDA compliance ahead of schedule, enabling faster market entry for life-saving equipment.",
+        image: "/src/assets/componets/Part - Photos/IMG-20250519-WA0016.jpg"
       }
     ]
   },
   {
-    id: "research",
-    label: "Research",
+    id: "projects",
+    label: "Projects",
     items: [
       {
-        category: "Scientific Computing",
-        title: "AI Accelerates Drug Discovery",
-        description: "Machine learning models analyze molecular interactions, reducing pharmaceutical development time from years to months.",
-        image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80"
+        category: "Automotive Components",
+        title: "Tier-1 Automotive Supplier Achievement",
+        description: "EMuski became a trusted Tier-1 supplier for brake system components, delivering 2 million parts annually with 99.9% on-time delivery to global automotive giants.",
+        image: "/src/assets/componets/Part - Photos/IMG-20250206-WA0025.jpg"
       },
       {
-        category: "Climate Science",
-        title: "Simulating Earth's Climate Future",
-        description: "Advanced climate models powered by AI provide unprecedented accuracy in predicting environmental changes and extreme weather patterns.",
-        image: "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=800&q=80"
+        category: "Custom Fixtures",
+        title: "Smart Manufacturing Implementation",
+        description: "Our custom fixture design reduced assembly time by 40% for an electronics manufacturer, enabling them to meet increased demand during peak season while maintaining quality standards.",
+        image: "/src/assets/componets/3.Oct 25/cent_fixture/WhatsApp Image 2025-10-27 at 3.21.23 PM.jpeg"
       }
     ]
   }
 ];
 
 export const FeaturedTabs = () => {
-  const [activeTab, setActiveTab] = useState("ai-models");
+  const [activeTab, setActiveTab] = useState("engineering");
 
   return (
     <section className="py-20 bg-background">

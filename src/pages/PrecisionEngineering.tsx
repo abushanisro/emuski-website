@@ -3,47 +3,47 @@ import { Footer } from "../components/Footer";
 
 const engineeringServices = [
   {
-    title: "Cost Engineering",
-    description: "Advanced cost engineering capabilities optimizing manufacturing processes and reducing production costs.",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80",
+    title: "Precision CNC Machining",
+    description: "State-of-the-art CNC machining capabilities delivering high-precision components for automotive and aerospace applications with tight tolerances.",
+    image: "/src/assets/componets/Part - Photos/IMG-20250310-WA0011.jpg",
     features: [
-      "Cost analysis and optimization",
-      "Value engineering processes",
-      "Material cost reduction",
-      "Process efficiency improvement"
+      "5-axis CNC machining for complex geometries",
+      "Tight tolerance manufacturing (±0.01mm)",
+      "Surface finish optimization",
+      "Material expertise across metals and polymers"
     ]
   },
   {
-    title: "Design for Manufacturing",
-    description: "Expert design optimization services to ensure your products are manufacturable and cost-effective.",
-    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&q=80",
+    title: "Component Design & Validation",
+    description: "Complete product development lifecycle from concept to production, including rapid prototyping and engineering validation services.",
+    image: "/src/assets/componets/forus/WhatsApp Image 2025-08-23 at 10.06.37 PM.jpeg",
     features: [
-      "DFM analysis and recommendations",
-      "Manufacturing feasibility studies",
-      "Process optimization",
-      "Quality assurance planning"
+      "CAD design and 3D modeling",
+      "Rapid prototyping and testing",
+      "Design validation and verification",
+      "Engineering consultation and optimization"
     ]
   },
   {
-    title: "Process Engineering",
-    description: "Comprehensive process engineering solutions for efficient and scalable manufacturing operations.",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80",
+    title: "Custom Fixture & Tooling Design",
+    description: "Custom-designed fixtures and tooling solutions to optimize manufacturing processes and ensure consistent component quality for enhanced production efficiency.",
+    image: "/src/assets/componets/3.Oct 25/cent_fixture/WhatsApp Image 2025-10-27 at 3.21.23 PM.jpeg",
     features: [
-      "Process design and development",
-      "Workflow optimization",
-      "Automation integration",
-      "Performance monitoring"
+      "Custom fixture design and manufacturing",
+      "Specialized tooling development",
+      "Assembly automation solutions",
+      "Production efficiency optimization"
     ]
   },
   {
-    title: "Quality Engineering",
-    description: "Rigorous quality engineering practices ensuring the highest standards in every manufactured product.",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80",
+    title: "Quality Control Excellence",
+    description: "Advanced quality inspection and testing protocols ensuring every component meets exact specifications and industry standards for automotive and aerospace applications.",
+    image: "/src/assets/componets/Part - Photos/IMG-20250519-WA0016.jpg",
     features: [
-      "Quality control systems",
-      "Statistical process control",
-      "Inspection protocols",
-      "Continuous improvement"
+      "Dimensional inspection and verification",
+      "Material testing and certification",
+      "Statistical process control (SPC)",
+      "ISO 9001:2015 compliance assurance"
     ]
   }
 ];
@@ -94,7 +94,6 @@ export default function PrecisionEngineering() {
                     alt={service.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                 </div>
                 
                 <div className="p-6 space-y-4">

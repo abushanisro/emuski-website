@@ -2,46 +2,27 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import industriesHero from "@/assets/industries-hero.jpg";
-import { Activity, Car, Factory, Briefcase, GraduationCap, Building2 } from "lucide-react";
+import { Activity, Rocket, Shield } from "lucide-react";
 
 const Industries = () => {
   const industries = [
     {
       icon: <Activity className="h-12 w-12 text-primary" />,
-      title: "Healthcare",
-      description: "AI-powered medical imaging, drug discovery, and personalized patient care",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80"
+      title: "Healthcare & Medical Devices",
+      description: "Precision-manufactured medical components and devices meeting stringent FDA requirements, supporting life-saving technologies with exceptional quality standards.",
+      image: "/src/assets/componets/Part - Photos/IMG-20250519-WA0016.jpg"
     },
     {
-      icon: <Car className="h-12 w-12 text-primary" />,
-      title: "Automotive",
-      description: "Autonomous driving, vehicle design, and smart manufacturing",
-      image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80"
+      icon: <Rocket className="h-12 w-12 text-primary" />,
+      title: "Space Technology & Aerospace",
+      description: "High-precision components for aerospace and space applications, delivering critical parts that withstand extreme environments with zero-defect manufacturing.",
+      image: "/src/assets/componets/Part - Photos/IMG-20250310-WA0011.jpg"
     },
     {
-      icon: <Factory className="h-12 w-12 text-primary" />,
-      title: "Manufacturing",
-      description: "Intelligent factories, predictive maintenance, and quality control",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80"
-    },
-    {
-      icon: <Briefcase className="h-12 w-12 text-primary" />,
-      title: "Financial Services",
-      description: "Fraud detection, algorithmic trading, and risk management",
-      image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800&q=80"
-    },
-    {
-      icon: <GraduationCap className="h-12 w-12 text-primary" />,
-      title: "Education",
-      description: "Personalized learning, virtual labs, and research acceleration",
-      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80"
-    },
-    {
-      icon: <Building2 className="h-12 w-12 text-primary" />,
-      title: "Retail",
-      description: "Smart stores, supply chain optimization, and customer analytics",
-      image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80"
+      icon: <Shield className="h-12 w-12 text-primary" />,
+      title: "Defense & Critical Systems",
+      description: "Mission-critical components for defense applications, meeting military specifications with advanced quality systems and stringent security protocols.",
+      image: "/src/assets/componets/3.Oct 25/cent_fixture/WhatsApp Image 2025-10-27 at 3.21.23 PM.jpeg"
     }
   ];
 
@@ -50,26 +31,25 @@ const Industries = () => {
       <Navbar />
       <main className="pt-16">
         {/* Hero Section */}
-        <section className="relative h-[80vh] bg-background overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-transparent z-10" />
-          <img
-            src={industriesHero}
-            alt="Industries"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
+        <section className="relative py-20 bg-emuski-teal-darker text-white overflow-hidden">
+          <div className="absolute inset-0 opacity-10 pointer-events-none">
+            <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+          </div>
           
-          <div className="relative z-20 container mx-auto px-6 h-full flex items-center">
-            <div className="max-w-3xl animate-fade-in">
-              <h1 className="text-6xl md:text-7xl font-bold text-foreground mb-6 leading-tight">
-                Transforming Industries with AI
+          <div className="container mx-auto px-6 relative z-10">
+            <div className="max-w-4xl mx-auto text-center space-y-6">
+              <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+                Precision Manufacturing for Critical Industries
               </h1>
               
-              <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                Discover how AI and accelerated computing are revolutionizing every sector, from healthcare to manufacturing, finance to retail.
+              <p className="text-xl text-white/90 leading-relaxed max-w-2xl mx-auto">
+                EMuski delivers precision-engineered components for healthcare, space technology, and defense applications where quality, reliability, and performance are mission-critical.
               </p>
               
-              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-6 text-lg">
-                Explore Solutions
+              <div className="h-1 w-24 bg-white rounded-full mx-auto"></div>
+              
+              <Button className="bg-white text-emuski-teal-darker hover:bg-gray-100 font-semibold px-8 py-4 text-lg">
+                Explore Our Capabilities
               </Button>
             </div>
           </div>
@@ -80,10 +60,10 @@ const Industries = () => {
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-foreground mb-4">
-                AI Solutions for Every Industry
+                Critical Industries We Serve
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Cutting-edge technology powering innovation across diverse sectors
+                Specialized manufacturing solutions for mission-critical applications where precision and reliability are paramount
               </p>
             </div>
 
@@ -99,7 +79,6 @@ const Industries = () => {
                       alt={industry.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
                     <div className="absolute bottom-4 left-4">
                       {industry.icon}
                     </div>
@@ -132,28 +111,28 @@ const Industries = () => {
             <div className="grid md:grid-cols-2 gap-8">
               {[
                 {
-                  company: "Global Healthcare Provider",
-                  achievement: "40% Faster Diagnosis",
-                  description: "AI-powered medical imaging reduces diagnosis time while improving accuracy",
+                  company: "Leading Medical Device Manufacturer",
+                  achievement: "FDA Approval Accelerated",
+                  description: "EMuski's precision manufacturing helped accelerate FDA approval by delivering medical device components that exceeded quality standards and regulatory requirements.",
                   industry: "Healthcare"
                 },
                 {
-                  company: "Leading Automotive Manufacturer",
-                  achievement: "100M+ Miles Autonomous",
-                  description: "Self-driving technology tested across diverse road conditions worldwide",
-                  industry: "Automotive"
+                  company: "Space Technology Pioneer",
+                  achievement: "Zero-Defect Mission Success",
+                  description: "Critical aerospace components manufactured by EMuski achieved 100% mission success rate in demanding space environments with zero component failures.",
+                  industry: "Space Technology"
                 },
                 {
-                  company: "Major Financial Institution",
-                  achievement: "99.9% Fraud Detection",
-                  description: "Real-time transaction analysis prevents billions in fraudulent activities",
-                  industry: "Financial Services"
+                  company: "Defense Contractor",
+                  achievement: "$12M Annual Contract",
+                  description: "EMuski earned a 5-year defense contract valued at $12M annually by exceeding military specifications and stringent security requirements.",
+                  industry: "Defense"
                 },
                 {
-                  company: "Manufacturing Leader",
-                  achievement: "50% Reduced Downtime",
-                  description: "Predictive maintenance prevents equipment failures before they occur",
-                  industry: "Manufacturing"
+                  company: "Aerospace OEM",
+                  achievement: "30% Weight Reduction",
+                  description: "Advanced engineering solutions reduced component weight by 30% while improving structural integrity for next-generation aircraft applications.",
+                  industry: "Aerospace"
                 }
               ].map((story, index) => (
                 <Card
@@ -186,13 +165,13 @@ const Industries = () => {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-4xl mx-auto text-center space-y-6">
               <span className="text-white/80 text-sm font-semibold tracking-wider uppercase">
-                AI Solutions
+                Precision Manufacturing
               </span>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
-                Transform Your Industry with AI
+                Partner with EMuski for Mission-Critical Components
               </h2>
               <p className="text-lg sm:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto">
-                Connect with our industry experts to explore custom AI solutions that drive innovation and optimize operations.
+                Connect with our engineering experts to explore precision manufacturing solutions for healthcare, space technology, and defense applications.
               </p>
               <div className="h-1 w-16 sm:w-20 md:w-24 bg-white rounded-full mx-auto"></div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">

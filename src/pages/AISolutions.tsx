@@ -26,11 +26,11 @@ const AISolutions = () => {
           <div className="relative z-20 container mx-auto px-6 h-full flex items-center">
             <div className="max-w-3xl animate-fade-in">
               <h1 className="text-6xl md:text-7xl font-bold text-foreground mb-6 leading-tight">
-                The Most Advanced AI, Ready for Enterprise
+                Next-Gen AI - Mithran
               </h1>
               
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                Explore the latest breakthroughs in artificial intelligence. From generative AI to autonomous systems, discover enterprise-ready solutions.
+                AI-powered intelligence for smarter product development, supply chain, and cost optimization.
               </p>
               
               <div className="flex gap-4 flex-wrap">
@@ -73,13 +73,13 @@ const AISolutions = () => {
                 <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
                   <div>
                     <h2 className="text-4xl font-bold text-foreground mb-6">
-                      What Is EMUSKI?
+                      What is Mithran?
                     </h2>
                     <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                      A comprehensive AI computing platform delivering breakthrough performance for training and deploying large language models, computer vision, and generative AI applications.
+                      EMuski is building Mithran, a next-generation AI-driven engineering and manufacturing platform that acts as a digital backbone for OEMs. It is designed to simplify the entire product lifecycle—from design and costing to supplier management and project execution.
                     </p>
                     <p className="text-lg text-muted-foreground leading-relaxed">
-                      From research to production, our solutions power the entire AI lifecycle with unmatched efficiency and scale.
+                      By combining automation, artificial intelligence, supplier networking, and real-time monitoring, Mithran will transform traditional workflows into a smart, data-driven ecosystem.
                     </p>
                   </div>
                   <div className="grid grid-cols-2 gap-6">
@@ -95,6 +95,71 @@ const AISolutions = () => {
                         <div className="text-sm text-muted-foreground">{stat.title}</div>
                       </Card>
                     ))}
+                  </div>
+                </div>
+                
+                {/* How Mithran Will Work Section */}
+                <div className="mb-16">
+                  <h2 className="text-4xl font-bold text-foreground mb-8 text-center">How Mithran Will Work</h2>
+                  <p className="text-xl text-muted-foreground mb-8 text-center">Mithran enables OEMs to:</p>
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {[
+                      {
+                        title: "Upload CAD drawings and automatically generate structured BOMs",
+                        description: "Streamlined design-to-BOM conversion process"
+                      },
+                      {
+                        title: "Get AI-driven process planning and accurate cost estimation",
+                        description: "Smart cost optimization and planning automation"
+                      },
+                      {
+                        title: "Identify capable suppliers, manage RFQs, and validate quotations",
+                        description: "Intelligent supplier network management"
+                      },
+                      {
+                        title: "Collaborate on design-for-manufacturing reviews and finalize production-ready drawings",
+                        description: "Enhanced DFM collaboration workflows"
+                      },
+                      {
+                        title: "Monitor projects and logistics in real time for faster, risk-free execution",
+                        description: "Real-time project visibility and control"
+                      }
+                    ].map((feature, index) => (
+                      <Card key={index} className="p-6 bg-card border-border hover:border-primary/50 transition-all">
+                        <h3 className="text-lg font-bold text-foreground mb-3">
+                          {feature.title}
+                        </h3>
+                        <p className="text-muted-foreground text-sm">
+                          {feature.description}
+                        </p>
+                      </Card>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Why It Matters Section */}
+                <div className="grid md:grid-cols-2 gap-12">
+                  <div>
+                    <h2 className="text-3xl font-bold text-foreground mb-6">Why It Matters</h2>
+                    <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                      Mithran is being built to: Accelerate design-to-production cycles, Reduce manual effort and errors, Optimize sourcing and cost validation, Provide end-to-end visibility and smarter decision-making.
+                    </p>
+                    <div className="space-y-4">
+                      <div className="border-l-4 border-primary pl-4">
+                        <h4 className="font-bold text-foreground">30% faster sourcing cycles</h4>
+                        <p className="text-muted-foreground text-sm">Accelerated procurement and supplier validation</p>
+                      </div>
+                      <div className="border-l-4 border-primary pl-4">
+                        <h4 className="font-bold text-foreground">15% cost savings through accurate cost validation</h4>
+                        <p className="text-muted-foreground text-sm">AI-powered cost optimization and validation</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <h2 className="text-3xl font-bold text-foreground mb-6">Looking Ahead</h2>
+                    <p className="text-lg text-muted-foreground leading-relaxed">
+                      EMuski is building Mithran to help OEMs gain AI-powered intelligence, stronger control, and global competitiveness. Once launched, Mithran will be the platform that connects engineering precision with data-driven decision-making.
+                    </p>
                   </div>
                 </div>
               </TabsContent>

@@ -1,4 +1,4 @@
-import { Menu, Home } from "lucide-react";
+import { Menu, Home, ChevronDown } from "lucide-react";
 import { Button } from "./ui/button";
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
@@ -10,11 +10,43 @@ interface NavItem {
   hideOnMobile?: boolean;
 }
 
+const servicesDropdown = {
+  manufacturingServices: {
+    name: "Manufacturing Services",
+    path: "/manufacturing-services",
+    subItems: [
+      { name: "OEM Manufacturing", path: "/manufacturing-services#oem" },
+      { name: "Custom Manufacturing", path: "/manufacturing-services#custom" },
+      { name: "Rapid Prototyping", path: "/manufacturing-services#prototyping" },
+      { name: "Production Scaling", path: "/manufacturing-services#scaling" },
+      { name: "SaaS Mithran AI", path: "/solutions/ai", beta: true }
+    ]
+  },
+  precisionEngineering: {
+    name: "Precision Engineering",
+    path: "/precision-engineering",
+    subItems: [
+      { name: "CNC Machining", path: "/precision-engineering#cnc" },
+      { name: "Component Design", path: "/precision-engineering#design" },
+      { name: "Quality Control", path: "/precision-engineering#quality" },
+      { name: "Engineering Consultation", path: "/precision-engineering#consultation" }
+    ]
+  },
+  industries: {
+    name: "Industries",
+    path: "/industries",
+    subItems: [
+      { name: "Automotive", path: "/industries#automotive" },
+      { name: "Aerospace", path: "/industries#aerospace" },
+      { name: "Medical Devices", path: "/industries#medical" },
+      { name: "Electronics", path: "/industries#electronics" },
+      { name: "Defense", path: "/industries#defense" }
+    ]
+  }
+};
+
 const navigationConfig = {
   leftMenu: [
-    { name: "Manufacturing Services", path: "/manufacturing-services" },
-    { name: "Precision Engineering", path: "/precision-engineering" },
-    { name: "Industries", path: "/industries" },
     { name: "Blog", path: "/blog" }
   ],
   rightMenu: [
@@ -68,7 +100,9 @@ const routeToPageName: Record<string, string> = {
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeServiceDropdown, setActiveServiceDropdown] = useState<string | null>(null);
   const menuRef = useRef<HTMLDivElement>(null);
+  const servicesRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -76,19 +110,26 @@ export const Navbar = () => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         setIsMenuOpen(false);
       }
+      if (servicesRef.current && !servicesRef.current.contains(event.target as Node)) {
+        setActiveServiceDropdown(null);
+      }
     };
 
-    if (isMenuOpen) {
+    if (isMenuOpen || activeServiceDropdown) {
       document.addEventListener('mousedown', handleClickOutside);
     }
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [isMenuOpen]);
+  }, [isMenuOpen, activeServiceDropdown]);
 
   const isActiveLink = (path: string) => {
     return location.pathname === path;
+  };
+
+  const isActiveServiceLink = () => {
+    return Object.values(servicesDropdown).some(service => service.path === location.pathname);
   };
 
   const getLinkClasses = (path: string) => {
@@ -97,6 +138,14 @@ export const Navbar = () => {
     const inactiveClasses = "text-foreground hover:text-emuski-teal-darker";
     
     return `${baseClasses} ${isActiveLink(path) ? activeClasses : inactiveClasses}`;
+  };
+
+  const getServicesButtonClasses = () => {
+    const baseClasses = "transition-colors text-sm font-medium flex items-center space-x-1";
+    const activeClasses = "text-emuski-teal-darker";
+    const inactiveClasses = "text-foreground hover:text-emuski-teal-darker";
+    
+    return `${baseClasses} ${isActiveServiceLink() ? activeClasses : inactiveClasses}`;
   };
 
   const getCurrentPageName = () => {
@@ -118,7 +167,7 @@ export const Navbar = () => {
 <span className="text-lg sm:text-xl font-bold text-foreground group-hover:text-emuski-teal-darker transition-colors">EMUSKI</span>
 </Link>
 
-<div className="hidden md:flex items-center space-x-6">
+<div className="hidden md:flex items-center space-x-6" ref={servicesRef}>
 <Link 
 to="/" 
 className={`${getLinkClasses("/")} flex items-center space-x-1`}
@@ -126,6 +175,64 @@ className={`${getLinkClasses("/")} flex items-center space-x-1`}
 <Home className="h-4 w-4" />
 <span>Home</span>
 </Link>
+
+{/* Individual Service Dropdowns */}
+{Object.entries(servicesDropdown).map(([key, service]) => (
+<div key={key} className="relative">
+<div className="flex items-center">
+<Link
+to={service.path}
+className={getLinkClasses(service.path)}
+onClick={() => setActiveServiceDropdown(null)}
+>
+{service.name}
+</Link>
+<button
+onClick={() => setActiveServiceDropdown(activeServiceDropdown === key ? null : key)}
+onMouseEnter={() => setActiveServiceDropdown(key)}
+className="ml-1 p-1 text-foreground hover:text-emuski-teal-darker transition-colors"
+>
+<ChevronDown className={`h-3 w-3 transition-transform duration-200 ${activeServiceDropdown === key ? 'rotate-180' : ''}`} />
+</button>
+</div>
+
+{activeServiceDropdown === key && (
+<div 
+className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden z-50"
+onMouseLeave={() => setActiveServiceDropdown(null)}
+style={{ boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)' }}
+>
+<div className="py-2">
+<Link
+to={service.path}
+className="block px-4 py-3 text-sm font-semibold text-emuski-teal-darker border-b border-gray-100"
+onClick={() => setActiveServiceDropdown(null)}
+>
+{service.name} Overview
+</Link>
+{service.subItems.map((subItem, index) => (
+<Link
+key={subItem.path}
+to={subItem.path}
+className="block px-4 py-3 text-sm text-gray-700 hover:bg-emuski-teal/5 hover:text-emuski-teal-darker transition-colors"
+onClick={() => setActiveServiceDropdown(null)}
+>
+<div className="flex items-center justify-between">
+<span>{subItem.name}</span>
+{subItem.beta && (
+<span className="ml-2 px-2 py-0.5 bg-orange-100 text-orange-600 text-xs font-medium rounded-full border border-orange-200">
+BETA
+</span>
+)}
+</div>
+</Link>
+))}
+</div>
+</div>
+)}
+</div>
+))}
+
 {navigationConfig.leftMenu.map((item) => (
 <Link 
 key={item.path}

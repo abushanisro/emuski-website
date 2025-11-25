@@ -3,71 +3,148 @@ import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 import { Search, Filter, Grid, List, Eye, Download, Play, Pause, ChevronLeft, ChevronRight } from "lucide-react";
 
-// Sample gallery data - replace with your actual component showcases
+// Complete EMuski component gallery with consolidated manufacturing images
 const galleryItems = [
+  // October 2025 Manufacturing Excellence Story - Consolidated
   {
     id: 1,
-    title: "Manufacturing Dashboard",
-    category: "Dashboard",
-    type: "image",
-    thumbnail: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-    description: "Real-time manufacturing analytics dashboard with KPI tracking and performance metrics.",
-    tags: ["React", "Charts", "Analytics", "Real-time"]
+    title: "October 2025 Production Excellence Initiative",
+    category: "Recent Work",
+    type: "gallery",
+    thumbnail: "/src/assets/componets/3.Oct 25/WhatsApp Image 2025-08-28 at 10.34.17 AM.jpeg",
+    images: [
+      "/src/assets/componets/3.Oct 25/WhatsApp Image 2025-08-28 at 10.34.17 AM.jpeg",
+      "/src/assets/componets/3.Oct 25/WhatsApp Image 2025-08-28 at 10.36.22 AM.jpeg",
+      "/src/assets/componets/3.Oct 25/WhatsApp Image 2025-08-28 at 11.05.36 AM.jpeg",
+      "/src/assets/componets/3.Oct 25/WhatsApp Image 2025-09-03 at 11.58.16 AM.jpeg",
+      "/src/assets/componets/3.Oct 25/WhatsApp Image 2025-09-03 at 11.58.40 AM.jpeg",
+      "/src/assets/componets/3.Oct 25/WhatsApp Image 2025-09-03 at 11.58.58 AM.jpeg",
+      "/src/assets/componets/3.Oct 25/WhatsApp Image 2025-09-15 at 12.00.26 PM (1).jpeg",
+      "/src/assets/componets/3.Oct 25/WhatsApp Image 2025-09-15 at 12.00.26 PM.jpeg"
+    ],
+    image: "/src/assets/componets/3.Oct 25/WhatsApp Image 2025-08-28 at 10.34.17 AM.jpeg",
+    description: "EMuski's October 2025 manufacturing excellence initiative showcased our partnership with leading automotive OEMs, delivering critical components with unprecedented precision and speed. This comprehensive project included streamlined assembly operations, advanced quality validation systems, and seamless production transitions, resulting in 40% faster production cycles while maintaining ISO 9001:2015 quality standards.",
+    tags: ["October", "Production", "Excellence", "Components"]
   },
+  
+  // Centering Fixtures - Consolidated
   {
     id: 2,
-    title: "Component Library",
-    category: "UI Components",
-    type: "image",
-    thumbnail: "https://images.unsplash.com/photo-1558655146-d09347e92766?w=400&h=300&fit=crop",
-    image: "https://images.unsplash.com/photo-1558655146-d09347e92766?w=800&h=600&fit=crop",
-    description: "Comprehensive UI component library built with Tailwind CSS and React.",
-    tags: ["UI/UX", "Components", "Tailwind", "Design System"]
+    title: "Precision Centering Fixtures Collection",
+    category: "Fixtures & Tooling",
+    type: "gallery",
+    thumbnail: "/src/assets/componets/3.Oct 25/cent_fixture/WhatsApp Image 2025-10-27 at 3.21.23 PM.jpeg",
+    images: [
+      "/src/assets/componets/3.Oct 25/cent_fixture/WhatsApp Image 2025-10-27 at 3.21.23 PM.jpeg",
+      "/src/assets/componets/3.Oct 25/cent_fixture/WhatsApp Image 2025-10-27 at 3.21.56 PM.jpeg",
+      "/src/assets/componets/3.Oct 25/cent_fixture/WhatsApp Image 2025-10-27 at 3.22.40 PM.jpeg",
+      "/src/assets/componets/3.Oct 25/cent_fixture/WhatsApp Image 2025-10-27 at 3.23.17 PM.jpeg",
+      "/src/assets/componets/3.Oct 25/cent_fixture/WhatsApp Image 2025-10-27 at 3.23.56 PM.jpeg",
+      "/src/assets/componets/3.Oct 25/cent_fixture/WhatsApp Image 2025-10-27 at 3.24.36 PM.jpeg",
+      "/src/assets/componets/3.Oct 25/cent_fixture/WhatsApp Image 2025-10-27 at 3.25.16 PM.jpeg",
+      "/src/assets/componets/3.Oct 25/cent_fixture/WhatsApp Image 2025-10-27 at 3.26.01 PM.jpeg",
+      "/src/assets/componets/3.Oct 25/cent_fixture/WhatsApp Image 2025-10-27 at 3.26.20 PM.jpeg"
+    ],
+    image: "/src/assets/componets/3.Oct 25/cent_fixture/WhatsApp Image 2025-10-27 at 3.21.23 PM.jpeg",
+    description: "Comprehensive collection of custom-designed centering fixtures showcasing EMuski's precision manufacturing capabilities. These fixtures demonstrate our expertise in advanced tooling design, specialized manufacturing requirements, and integration of tooling systems for comprehensive manufacturing solutions. From initial design through final assembly, each fixture represents our commitment to manufacturing excellence.",
+    tags: ["Fixtures", "Centering", "Precision", "Custom"]
   },
+
+  // Innaccel Project - Consolidated
   {
     id: 3,
-    title: "Production Timeline",
-    category: "Timeline",
-    type: "image",
-    thumbnail: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-    description: "Interactive production timeline with milestone tracking and progress visualization.",
-    tags: ["Timeline", "Production", "Interactive", "Visualization"]
+    title: "Innaccel Project Manufacturing Solutions",
+    category: "Client Projects",
+    type: "gallery",
+    thumbnail: "/src/assets/componets/3.Oct 25/innaccel/WhatsApp Image 2025-10-22 at 10.33.50 AM.jpeg",
+    images: [
+      "/src/assets/componets/3.Oct 25/innaccel/WhatsApp Image 2025-10-22 at 10.33.50 AM.jpeg",
+      "/src/assets/componets/3.Oct 25/innaccel/WhatsApp Image 2025-10-22 at 10.34.03 AM.jpeg"
+    ],
+    image: "/src/assets/componets/3.Oct 25/innaccel/WhatsApp Image 2025-10-22 at 10.33.50 AM.jpeg",
+    description: "Specialized manufacturing solutions developed for Innaccel project requirements, showcasing EMuski's ability to deliver custom engineering solutions for unique industrial applications.",
+    tags: ["Innaccel", "Project", "Specialized", "Manufacturing"]
   },
+
+  // Matica Production Collection - Consolidated
   {
     id: 4,
-    title: "Quality Control Interface",
-    category: "Interface",
-    type: "image",
-    thumbnail: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&h=600&fit=crop",
-    description: "Quality control inspection interface with automated reporting and compliance tracking.",
-    tags: ["Quality", "Inspection", "Automation", "Compliance"]
+    title: "Matica Production Line Excellence",
+    category: "Production Systems",
+    type: "gallery",
+    thumbnail: "/src/assets/componets/Matica Photos2/DSC_1006.JPG",
+    images: [
+      "/src/assets/componets/Matica Photos2/DSC_1006.JPG",
+      "/src/assets/componets/Matica Photos2/DSC_1008.JPG",
+      "/src/assets/componets/Matica Photos2/DSC_1009.JPG",
+      "/src/assets/componets/Matica Photos2/DSC_1010.JPG",
+      "/src/assets/componets/Matica Photos2/DSC_1011.JPG",
+      "/src/assets/componets/Matica Photos2/DSC_1012.JPG",
+      "/src/assets/componets/Matica Photos2/DSC_1013.JPG",
+      "/src/assets/componets/Matica Photos2/DSC_1014.JPG",
+      "/src/assets/componets/Matica Photos2/DSC_1015.JPG",
+      "/src/assets/componets/Matica Photos2/DSC_1016.JPG",
+      "/src/assets/componets/Matica Photos2/DSC_1017.JPG",
+      "/src/assets/componets/Matica Photos2/DSC_1018.JPG",
+      "/src/assets/componets/Matica Photos2/DSC_1019.JPG",
+      "/src/assets/componets/Matica Photos2/DSC_1020.JPG"
+    ],
+    image: "/src/assets/componets/Matica Photos2/DSC_1006.JPG",
+    description: "Professional production line setup and manufacturing excellence for Matica project. This comprehensive collection showcases our advanced assembly stations, quality assurance processes, manufacturing workflow optimization, and cutting-edge production technology implementation, demonstrating EMuski's commitment to operational excellence and process innovation.",
+    tags: ["Matica", "Production", "Excellence", "Professional"]
   },
+
+  // Manufacturing Components Collection - Consolidated  
   {
     id: 5,
-    title: "Inventory Management",
-    category: "Management",
-    type: "image",
-    thumbnail: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=300&fit=crop",
-    image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&h=600&fit=crop",
-    description: "Smart inventory management system with real-time stock tracking and automated reordering.",
-    tags: ["Inventory", "Automation", "Management", "Real-time"]
+    title: "Precision Manufacturing Components",
+    category: "CNC Machining & Parts",
+    type: "gallery",
+    thumbnail: "/src/assets/componets/Part - Photos/IMG-20250206-WA0025.jpg",
+    images: [
+      "/src/assets/componets/Part - Photos/IMG-20250206-WA0025.jpg",
+      "/src/assets/componets/Part - Photos/IMG-20250310-WA0011.jpg",
+      "/src/assets/componets/Part - Photos/IMG-20250519-WA0016.jpg",
+      "/src/assets/componets/Part - Photos/IMG-20250519-WA0017.jpg",
+      "/src/assets/componets/Part - Photos/IMG-20250519-WA0018.jpg",
+      "/src/assets/componets/Part - Photos/IMG-20250519-WA0019.jpg",
+      "/src/assets/componets/Part - Photos/IMG-20250519-WA0020.jpg",
+      "/src/assets/componets/Part - Photos/IMG-20250519-WA0021.jpg"
+    ],
+    image: "/src/assets/componets/Part - Photos/IMG-20250206-WA0025.jpg",
+    description: "High-precision manufactured components showcasing EMuski's CNC machining capabilities and quality control excellence. These components represent our partnership with automotive OEMs and industrial clients, demonstrating our ability to deliver complex geometries with tight tolerances and exceptional surface finishes.",
+    tags: ["Components", "CNC", "Precision", "Manufacturing"]
   },
+
+  // Forus Project Collection
   {
     id: 6,
-    title: "Engineering Workflows",
-    category: "Workflow",
-    type: "image",
-    thumbnail: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&h=300&fit=crop",
-    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop",
-    description: "Streamlined engineering workflow management with collaboration tools and version control.",
-    tags: ["Engineering", "Workflow", "Collaboration", "Version Control"]
+    title: "Forus Partnership Engineering Excellence",
+    category: "Client Projects", 
+    type: "gallery",
+    thumbnail: "/src/assets/componets/forus/WhatsApp Image 2025-08-23 at 10.06.37 PM.jpeg",
+    images: [
+      "/src/assets/componets/forus/WhatsApp Image 2025-08-23 at 10.06.37 PM.jpeg"
+    ],
+    image: "/src/assets/componets/forus/WhatsApp Image 2025-08-23 at 10.06.37 PM.jpeg",
+    description: "Strategic partnership with Forus showcasing EMuski's rapid prototyping and engineering validation capabilities, enabling accelerated product development cycles for our B2B manufacturing partners.",
+    tags: ["Forus", "Partnership", "Engineering", "Prototyping"]
   }
 ];
 
-const categories = ["All", ...Array.from(new Set(galleryItems.map(item => item.category)))];
+// Category mapping for better UX
+const categoryMapping: { [key: string]: string } = {
+  "Recent Work": "Recent Work",
+  "Fixtures & Tooling": "Fixtures & Tooling", 
+  "Client Projects": "Client Projects",
+  "Production Systems": "Production Systems",
+  "CNC Machining & Parts": "CNC Machining & Parts",
+  "Assembly & Production": "Assembly & Production",
+  "Quality Control": "Quality Control"
+};
+
+// Get unique categories for filtering
+const categories = ["All", ...Object.values(categoryMapping)];
 
 export const Gallery = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -75,307 +152,244 @@ export const Gallery = () => {
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
   const [selectedImage, setSelectedImage] = useState<typeof galleryItems[0] | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentGalleryIndex, setCurrentGalleryIndex] = useState(0);
+
+  useEffect(() => {
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if (selectedImage) {
+        if (e.key === 'Escape') {
+          closeLightbox();
+        } else if (e.key === 'ArrowLeft') {
+          navigateGallery(-1);
+        } else if (e.key === 'ArrowRight') {
+          navigateGallery(1);
+        }
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyPress);
+    return () => document.removeEventListener('keydown', handleKeyPress);
+  }, [selectedImage, currentImageIndex, currentGalleryIndex]);
 
   // Set SEO meta tags for gallery page
   useEffect(() => {
-    document.title = "EMUSKI Gallery | UI/UX Component Showcase";
+    document.title = "EMuski Component Gallery - Manufacturing Excellence Showcase";
     
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute('name', 'description');
-      document.head.appendChild(metaDescription);
+    // Set meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Explore EMuski\'s comprehensive gallery of precision manufacturing components, engineering solutions, and production excellence. Showcasing automotive, aerospace, and industrial manufacturing capabilities.');
     }
-    metaDescription.setAttribute('content', 'Explore EMUSKI\'s comprehensive gallery of UI/UX components, dashboards, and manufacturing interfaces. See our design system in action.');
   }, []);
-
-  const filteredItems = galleryItems.filter(item => {
-    const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         item.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesCategory = selectedCategory === "All" || item.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
 
   const openLightbox = (item: typeof galleryItems[0], index: number) => {
     setSelectedImage(item);
     setCurrentImageIndex(index);
+    setCurrentGalleryIndex(0); // Start with first image in gallery
   };
 
   const closeLightbox = () => {
     setSelectedImage(null);
+    setCurrentImageIndex(0);
+    setCurrentGalleryIndex(0);
   };
 
-  const nextImage = () => {
-    const nextIndex = (currentImageIndex + 1) % filteredItems.length;
-    setCurrentImageIndex(nextIndex);
-    setSelectedImage(filteredItems[nextIndex]);
+  const navigateGallery = (direction: number) => {
+    if (!selectedImage || !selectedImage.images) return;
+    
+    const newIndex = currentGalleryIndex + direction;
+    if (newIndex >= 0 && newIndex < selectedImage.images.length) {
+      setCurrentGalleryIndex(newIndex);
+    }
   };
 
-  const prevImage = () => {
-    const prevIndex = currentImageIndex === 0 ? filteredItems.length - 1 : currentImageIndex - 1;
-    setCurrentImageIndex(prevIndex);
-    setSelectedImage(filteredItems[prevIndex]);
+  // Filter items based on search term and category
+  const filteredItems = galleryItems.filter(item => {
+    const matchesSearch = 
+      item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    
+    const matchesCategory = selectedCategory === "All" || item.category === selectedCategory;
+    
+    return matchesSearch && matchesCategory;
+  });
+
+  const getCurrentImage = () => {
+    if (!selectedImage) return "";
+    if (selectedImage.type === "gallery" && selectedImage.images) {
+      return selectedImage.images[currentGalleryIndex];
+    }
+    return selectedImage.image;
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <section className="relative bg-emuski-teal-darker text-white pt-20 pb-16 overflow-hidden">
-        <div className="absolute inset-0 opacity-10 pointer-events-none">
-          <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+    <div className="min-h-screen bg-gray-50 py-20">
+      <div className="container mx-auto px-4 sm:px-6">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+            Manufacturing Excellence Gallery
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Explore EMuski's comprehensive portfolio of precision manufacturing, engineering solutions, and production excellence across automotive, aerospace, and industrial sectors.
+          </p>
         </div>
-        <div className="container mx-auto px-4 sm:px-6 relative z-10">
-          <div className="max-w-4xl mx-auto text-center space-y-4 sm:space-y-6">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
-              EMUSKI <span className="text-white/80">Gallery</span>
-            </h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 leading-relaxed">
-              Explore our comprehensive showcase of manufacturing interfaces, dashboards, and design components.
-            </p>
-            <div className="flex items-center justify-center text-sm text-white/70">
-              <span>Discover innovative solutions that drive manufacturing excellence</span>
+
+        {/* Search and Filter Controls */}
+        <div className="mb-8 space-y-4 lg:space-y-0 lg:flex lg:items-center lg:justify-between">
+          {/* Search Bar */}
+          <div className="relative flex-1 lg:max-w-md">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+            <input
+              type="text"
+              placeholder="Search components, manufacturing processes, technologies..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emuski-teal focus:border-transparent"
+            />
+          </div>
+
+          {/* Filters and View Controls */}
+          <div className="flex items-center space-x-4">
+            {/* Category Filter */}
+            <div className="relative">
+              <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="pl-10 pr-8 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emuski-teal appearance-none bg-white min-w-[180px]"
+              >
+                {categories.map(category => (
+                  <option key={category} value={category}>{category}</option>
+                ))}
+              </select>
+            </div>
+
+            {/* View Mode Toggle */}
+            <div className="flex border border-gray-200 rounded-lg overflow-hidden">
+              <button
+                onClick={() => setViewMode("grid")}
+                className={`p-3 ${viewMode === "grid" ? "bg-emuski-teal text-white" : "bg-white text-gray-600 hover:bg-gray-50"} transition-colors`}
+              >
+                <Grid className="h-5 w-5" />
+              </button>
+              <button
+                onClick={() => setViewMode("list")}
+                className={`p-3 ${viewMode === "list" ? "bg-emuski-teal text-white" : "bg-white text-gray-600 hover:bg-gray-50"} transition-colors`}
+              >
+                <List className="h-5 w-5" />
+              </button>
             </div>
           </div>
         </div>
-      </section>
 
-      {/* Filter and Search Section */}
-      <section className="py-12 bg-white border-b border-gray-200">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-              {/* Search */}
-              <div className="sm:col-span-2">
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
-                  <input
-                    type="text"
-                    placeholder="Search components, features, technologies..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emuski-teal focus:border-transparent"
-                  />
-                </div>
-              </div>
-
-              {/* Category Filter */}
-              <div>
-                <select
-                  value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emuski-teal focus:border-transparent"
-                >
-                  {categories.map(category => (
-                    <option key={category} value={category}>{category}</option>
-                  ))}
-                </select>
-              </div>
-
-              {/* View Mode */}
-              <div className="flex space-x-2 sm:col-span-2 lg:col-span-1">
-                <Button
-                  variant={viewMode === "grid" ? "default" : "outline"}
-                  size="sm"
-                  onClick={() => setViewMode("grid")}
-                  className="flex-1"
-                >
-                  <Grid className="h-4 w-4" />
-                  <span className="hidden sm:inline ml-2">Grid</span>
-                </Button>
-                <Button
-                  variant={viewMode === "list" ? "default" : "outline"}
-                  size="sm"
-                  onClick={() => setViewMode("list")}
-                  className="flex-1"
-                >
-                  <List className="h-4 w-4" />
-                  <span className="hidden sm:inline ml-2">List</span>
-                </Button>
-              </div>
-            </div>
-
-            {/* Active Filters */}
-            {(selectedCategory !== "All" || searchTerm) && (
-              <div className="flex flex-wrap gap-2 mb-6">
-                <span className="text-sm text-gray-600">Active filters:</span>
-                {selectedCategory !== "All" && (
-                  <span className="inline-flex items-center px-3 py-1 bg-emuski-teal/10 text-emuski-teal rounded-full text-xs font-medium">
-                    {selectedCategory}
-                    <button onClick={() => setSelectedCategory("All")} className="ml-2">×</button>
-                  </span>
-                )}
-                {searchTerm && (
-                  <span className="inline-flex items-center px-3 py-1 bg-emuski-teal/10 text-emuski-teal rounded-full text-xs font-medium">
-                    "{searchTerm}"
-                    <button onClick={() => setSearchTerm("")} className="ml-2">×</button>
-                  </span>
-                )}
-              </div>
-            )}
-          </div>
+        {/* Results Count */}
+        <div className="mb-6 text-gray-600">
+          Showing {filteredItems.length} of {galleryItems.length} manufacturing portfolios
         </div>
-      </section>
 
-      {/* Gallery Grid/List */}
-      <section className="py-16">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="max-w-6xl mx-auto">
-            {viewMode === "grid" ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-                {filteredItems.map((item, index) => (
-                  <Card key={item.id} className="group overflow-hidden bg-white hover:shadow-lg transition-all duration-300 cursor-pointer">
-                    <div className="relative h-48 overflow-hidden">
-                      <img
-                        src={item.thumbnail}
-                        alt={item.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <Button
-                          variant="secondary"
-                          size="sm"
-                          onClick={() => openLightbox(item, index)}
-                          className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300"
-                        >
-                          <Eye className="h-4 w-4 mr-2" />
-                          View Details
-                        </Button>
-                      </div>
-                      <div className="absolute top-4 left-4">
-                        <span className="px-3 py-1 bg-emuski-teal/90 text-white text-xs font-medium rounded-full">
-                          {item.category}
-                        </span>
-                      </div>
-                    </div>
-                    
-                    <div className="p-6">
-                      <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-emuski-teal transition-colors">
-                        {item.title}
-                      </h3>
-                      <p className="text-sm text-gray-600 mb-4 line-clamp-2">
-                        {item.description}
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        {item.tags.map(tag => (
-                          <span key={tag} className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </Card>
-                ))}
-              </div>
-            ) : (
-              <div className="space-y-6">
-                {filteredItems.map((item, index) => (
-                  <Card key={item.id} className="group overflow-hidden bg-white hover:shadow-lg transition-all duration-300">
-                    <div className="flex flex-col sm:flex-row">
-                      <div className="relative w-full sm:w-64 h-48 sm:h-32 overflow-hidden flex-shrink-0">
-                        <img
-                          src={item.thumbnail}
-                          alt={item.title}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                        />
-                        <div className="absolute top-2 left-2">
-                          <span className="px-2 py-1 bg-emuski-teal/90 text-white text-xs font-medium rounded">
-                            {item.category}
-                          </span>
-                        </div>
-                      </div>
-                      
-                      <div className="flex-1 p-6">
-                        <div className="flex justify-between items-start mb-2">
-                          <h3 className="text-lg font-bold text-gray-900 group-hover:text-emuski-teal transition-colors">
-                            {item.title}
-                          </h3>
-                          <Button
-                            variant="outline"
-                            size="sm"
-                            onClick={() => openLightbox(item, index)}
-                          >
-                            <Eye className="h-4 w-4" />
-                          </Button>
-                        </div>
-                        <p className="text-sm text-gray-600 mb-4">
-                          {item.description}
-                        </p>
-                        <div className="flex flex-wrap gap-2">
-                          {item.tags.map(tag => (
-                            <span key={tag} className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </Card>
-                ))}
-              </div>
-            )}
-
-            {filteredItems.length === 0 && (
-              <div className="text-center py-16">
-                <div className="max-w-md mx-auto space-y-4">
-                  <div className="h-16 w-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto">
-                    <Search className="h-8 w-8 text-gray-400" />
+        {/* Gallery Grid */}
+        <div className={`${viewMode === "grid" ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" : "space-y-6"}`}>
+          {filteredItems.map((item, index) => (
+            <Card 
+              key={item.id} 
+              className="group overflow-hidden bg-white hover:shadow-lg transition-all duration-300 cursor-pointer"
+              onClick={() => openLightbox(item, index)}
+            >
+              <div className="relative h-64 overflow-hidden">
+                <img
+                  src={item.thumbnail}
+                  alt={item.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="text-white text-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                    <Eye className="h-8 w-8 mx-auto mb-2" />
+                    <span className="text-sm font-medium">
+                      {item.type === "gallery" ? `View ${item.images?.length || 1} Images` : "Click to View"}
+                    </span>
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900">No components found</h3>
-                  <p className="text-gray-600">
-                    Try adjusting your search criteria or browse all components by clearing the filters.
-                  </p>
-                  <Button
-                    onClick={() => {
-                      setSearchTerm("");
-                      setSelectedCategory("All");
-                    }}
-                    className="bg-emuski-teal hover:bg-emuski-teal/90 text-white"
-                  >
-                    Clear Filters
-                  </Button>
+                </div>
+                
+                <div className="absolute top-4 left-4">
+                  <span className="inline-block px-3 py-1 bg-emuski-teal text-white text-xs font-semibold rounded-sm">
+                    {item.category}
+                  </span>
                 </div>
               </div>
-            )}
-          </div>
+              
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-emuski-teal transition-colors">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 line-clamp-3">
+                  {item.description}
+                </p>
+              </div>
+            </Card>
+          ))}
         </div>
-      </section>
+
+        {/* No Results */}
+        {filteredItems.length === 0 && (
+          <div className="text-center py-12">
+            <div className="text-gray-400 mb-4">
+              <Search className="h-12 w-12 mx-auto" />
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">No results found</h3>
+            <p className="text-gray-600">Try adjusting your search terms or category filter</p>
+          </div>
+        )}
+      </div>
 
       {/* Lightbox Modal */}
       {selectedImage && (
         <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-2 sm:p-4">
           <div className="relative max-w-4xl w-full">
-            {/* Navigation */}
-            <button
-              onClick={prevImage}
-              className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/20 hover:bg-white/30 text-white p-2 sm:p-3 rounded-full transition-colors"
-            >
-              <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" />
-            </button>
-            <button
-              onClick={nextImage}
-              className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white/20 hover:bg-white/30 text-white p-2 sm:p-3 rounded-full transition-colors"
-            >
-              <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" />
-            </button>
-            
             {/* Close Button */}
             <button
               onClick={closeLightbox}
-              className="absolute top-2 right-2 sm:top-4 sm:right-4 z-10 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors text-lg sm:text-xl"
+              className="absolute top-4 right-4 z-30 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-colors text-xl sm:text-2xl font-bold shadow-lg backdrop-blur-sm border border-white/20 w-12 h-12 flex items-center justify-center"
             >
               ×
             </button>
 
-            {/* Image */}
+            {/* Gallery Navigation */}
+            {selectedImage.type === "gallery" && selectedImage.images && selectedImage.images.length > 1 && (
+              <>
+                <button
+                  onClick={() => navigateGallery(-1)}
+                  disabled={currentGalleryIndex === 0}
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 z-30 bg-black/50 hover:bg-black/70 disabled:opacity-50 disabled:cursor-not-allowed text-white p-3 rounded-full transition-colors shadow-lg backdrop-blur-sm border border-white/20"
+                >
+                  <ChevronLeft className="h-6 w-6" />
+                </button>
+                <button
+                  onClick={() => navigateGallery(1)}
+                  disabled={currentGalleryIndex === selectedImage.images.length - 1}
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 z-30 bg-black/50 hover:bg-black/70 disabled:opacity-50 disabled:cursor-not-allowed text-white p-3 rounded-full transition-colors shadow-lg backdrop-blur-sm border border-white/20"
+                >
+                  <ChevronRight className="h-6 w-6" />
+                </button>
+
+                {/* Image Counter */}
+                <div className="absolute top-4 left-4 z-30 bg-black/50 text-white px-3 py-1 rounded-full text-sm backdrop-blur-sm border border-white/20">
+                  {currentGalleryIndex + 1} / {selectedImage.images.length}
+                </div>
+              </>
+            )}
+
+            {/* Image Content */}
             <div className="bg-white rounded-lg overflow-hidden">
               <img
-                src={selectedImage.image}
+                src={getCurrentImage()}
                 alt={selectedImage.title}
                 className="w-full h-auto max-h-[50vh] sm:max-h-[60vh] object-contain"
               />
-              <div className="p-4 sm:p-6">
-                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4 space-y-3 sm:space-y-0">
+              
+              <div className="p-6">
+                <div className="flex items-start justify-between mb-4">
                   <div>
                     <span className="px-3 py-1 bg-emuski-teal/10 text-emuski-teal text-xs sm:text-sm font-medium rounded-full">
                       {selectedImage.category}
@@ -384,23 +398,11 @@ export const Gallery = () => {
                   </div>
                   <Button variant="outline" size="sm">
                     <Download className="h-4 w-4 mr-2" />
-                    <span className="hidden sm:inline">Download</span>
+                    Download
                   </Button>
                 </div>
                 <p className="text-gray-700 mb-4">{selectedImage.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {selectedImage.tags.map((tag) => (
-                    <span key={tag} className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
               </div>
-            </div>
-
-            {/* Image Counter */}
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white/20 text-white px-4 py-2 rounded-full text-sm">
-              {currentImageIndex + 1} of {filteredItems.length}
             </div>
           </div>
         </div>

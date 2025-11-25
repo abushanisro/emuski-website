@@ -14,48 +14,48 @@ const clientLogos = [
   { name: "DefenseTech", logo: "https://via.placeholder.com/120x60/FFFFFF/000000?text=DefenseTech" },
 ];
 
-const newsItems = [
+const successStories = [
   {
-    category: "Manufacturing",
-    title: "AI-Powered Precision Manufacturing Reduces Costs by 25%",
-    description: "Smart manufacturing systems optimize production efficiency and quality control across automotive and aerospace sectors.",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80",
-    link: "#"
+    category: "Automotive Excellence",
+    title: "Tier-1 Automotive Supplier Achievement",
+    description: "EMuski became a trusted Tier-1 supplier for brake system components, delivering 2 million parts annually with 99.9% on-time delivery to global automotive giants.",
+    image: "/src/assets/componets/Part - Photos/IMG-20250206-WA0025.jpg",
+    link: "/gallery"
   },
   {
-    category: "Engineering",
-    title: "Advanced Should-Costing Methodology Transforms OEM Procurement",
-    description: "Data-driven cost modeling delivers 15% procurement savings through detailed component analysis and benchmarking.",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80",
-    link: "#"
+    category: "Precision Engineering",
+    title: "October 2025 Production Excellence Initiative",
+    description: "EMuski launched an ambitious manufacturing excellence initiative, partnering with leading automotive OEMs to deliver critical components with unprecedented precision and speed.",
+    image: "/src/assets/componets/3.Oct 25/WhatsApp Image 2025-08-28 at 10.34.17 AM.jpeg",
+    link: "/gallery"
   },
   {
-    category: "Manufacturing",
-    title: "Rapid Prototyping Accelerates Product Development Cycles",
-    description: "NPD Center capabilities reduce prototype delivery time by 60% enabling faster design validation and testing.",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80",
-    link: "#"
+    category: "Smart Manufacturing",
+    title: "Custom Fixture Implementation Success",
+    description: "Our custom fixture design reduced assembly time by 40% for an electronics manufacturer, enabling them to meet increased demand during peak season while maintaining quality standards.",
+    image: "/src/assets/componets/3.Oct 25/cent_fixture/WhatsApp Image 2025-10-27 at 3.21.23 PM.jpeg",
+    link: "/gallery"
   },
   {
-    category: "Engineering",
-    title: "VAVE Analysis Delivers Record Component Cost Optimization",
-    description: "Teardown and benchmarking studies achieve 30% cost reduction while maintaining quality standards.",
-    image: "https://images.unsplash.com/photo-1639322537228-f710d846310a?w=600&q=80",
-    link: "#"
+    category: "Production Systems",
+    title: "Matica Production Line Excellence",
+    description: "Professional production line setup showcasing our advanced assembly stations, quality assurance processes, and manufacturing workflow optimization for operational excellence.",
+    image: "/src/assets/componets/Matica Photos2/DSC_1008.JPG",
+    link: "/gallery"
   },
   {
-    category: "Manufacturing",
-    title: "On-Demand Production Solutions Scale to Meet Market Demands",
-    description: "Flexible manufacturing capabilities adapt from low-volume builds to full-scale production with lean principles.",
-    image: "https://images.unsplash.com/photo-1566207474742-de921626ad0c?w=600&q=80",
-    link: "#"
+    category: "CNC Machining",
+    title: "High-Precision Component Manufacturing",
+    description: "Delivered complex geometries with tight tolerances and exceptional surface finishes for automotive OEMs, demonstrating our advanced CNC machining capabilities.",
+    image: "/src/assets/componets/Part - Photos/IMG-20250310-WA0011.jpg",
+    link: "/gallery"
   },
   {
-    category: "AI Technology",
-    title: "Mithran AI Platform Revolutionizes Manufacturing Intelligence",
-    description: "Next-generation AI platform delivers 30% faster sourcing cycles and 15% cost savings for OEM partners.",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=80",
-    link: "#"
+    category: "Client Partnership",
+    title: "Aerospace Innovation Partnership Success",
+    description: "Strategic partnership with Forus showcasing EMuski's rapid prototyping and engineering validation capabilities, enabling accelerated product development cycles for our B2B manufacturing partners.",
+    image: "/src/assets/componets/forus/WhatsApp Image 2025-08-23 at 10.06.37 PM.jpeg",
+    link: "/gallery"
   }
 ];
 
@@ -121,7 +121,7 @@ export const NewsCarousel = () => {
         
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-xl sm:text-2xl font-bold text-gray-900">Latest News & Updates</h2>
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900">Our Success Stories</h2>
           
           <div className="hidden sm:flex space-x-2">
             <Button
@@ -147,7 +147,7 @@ export const NewsCarousel = () => {
           ref={containerRef}
           className="flex overflow-x-auto space-x-4 sm:space-x-6 pb-4 scrollbar-hide"
         >
-          {newsItems.map((item, index) => (
+          {successStories.map((item, index) => (
             <Card
               key={index}
               className="flex-shrink-0 w-80 sm:w-96 group bg-white border-gray-200 hover:border-emuski-teal/50 transition-all duration-300 cursor-pointer overflow-hidden"
@@ -165,7 +165,7 @@ export const NewsCarousel = () => {
                   <div className="flex items-center space-x-2 mb-3">
                     <span className="text-xs font-medium text-gray-700 uppercase tracking-wider">{item.category}</span>
                     <span className="text-gray-300">|</span>
-                    <span className="text-xs font-medium text-gray-700 uppercase tracking-wider">News</span>
+                    <span className="text-xs font-medium text-gray-700 uppercase tracking-wider">Success Story</span>
                   </div>
                   
                   <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2 leading-tight">

@@ -13,27 +13,27 @@ interface Slide {
 
 const slides: Slide[] = [
   {
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
-    category: "Engineering ",
-    title: "Engineering Precision",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+    category: "Engineering",
+    title: "Engineering Excellence",
     shortTitle: "Engineering",
-    description: "Driving product value, cost optimization, and supply chain strength through deep expertise and technology. Delivering accurate cost estimation, VAVE benchmarking, strategic sourcing support, and expert engineering integration.",
+    description: "Driving product value, cost optimization, and supply chain strength through deep expertise and technology.",
     link: "/precision-engineering",
   },
   {
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-    category: "Manufacturing Excellence",
-    title: "Manufacturing Excellence",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+    category: "Manufacturing",
+    title: "Manufacturing Excellence", 
     shortTitle: "Manufacturing",
-    description: "Accelerating innovation and scaling production with flexible, technology-enabled capabilities. Our NPD Center provides rapid prototyping and on-demand manufacturing solutions for faster time-to-market.",
+    description: "Accelerating innovation and scaling production with flexible, technology-enabled capabilities.",
     link: "/manufacturing-services",
   },
   {
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80",
-    category: "Next-Gen AI - Mithran",
+    category: "Next-Gen AI",
     title: "Next-Gen AI - Mithran",
     shortTitle: "NextGen AI",
-    description: "AI-powered intelligence for smarter product development, supply chain, and cost optimization. Mithran transforms traditional workflows into a smart, data-driven ecosystem for OEMs.",
+    description: "AI-powered intelligence for smarter product development, supply chain, and cost optimization.",
     link: "/solutions/ai",
   },
 ];

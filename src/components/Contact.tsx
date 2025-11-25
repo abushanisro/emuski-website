@@ -22,7 +22,7 @@ const contactMethods = [
   {
     icon: Phone,
     title: "Phone",
-    details: "+1 (555) 123-4567",
+    details: "+91 (555) 123-4567",
     description: "Speak directly with our team",
     action: "Call Now"
   },
@@ -36,14 +36,14 @@ const contactMethods = [
   {
     icon: MapPin,
     title: "Visit Us",
-    details: "123 Innovation Drive, Tech City, TC 12345",
+    details: "Electronic City Phase 2, Bangalore, Karnataka 560100",
     description: "Schedule an in-person meeting",
     action: "Get Directions"
   },
   {
     icon: Clock,
     title: "Business Hours",
-    details: "Mon - Fri: 8:00 AM - 6:00 PM",
+    details: "Mon - Fri: 9:00 AM - 6:00 PM IST",
     description: "We're here when you need us",
     action: "Schedule Meeting"
   }
@@ -51,22 +51,11 @@ const contactMethods = [
 
 const offices = [
   {
-    city: "Headquarters",
-    address: "123 Innovation Drive\nTech City, TC 12345",
-    phone: "+1 (555) 123-4567",
-    email: "hello@emuski.com"
-  },
-  {
-    city: "Manufacturing",
-    address: "456 Industrial Blvd\nManufacturing Hub, MH 67890",
-    phone: "+1 (555) 987-6543",
-    email: "manufacturing@emuski.com"
-  },
-  {
-    city: "Engineering",
-    address: "789 Design Center\nEngineering Park, EP 11111",
-    phone: "+1 (555) 456-7890",
-    email: "engineering@emuski.com"
+    city: "Headquarters & Manufacturing",
+    address: "Rudhra Coworks - Coworking Space\n126, RNS Plaza, KIADB Industrial Area, 1\nnear Tech Mahindra Gate, next to Hyderabad Magic\nElectronic City Phase 2\nBengaluru, Karnataka 560100",
+    phone: "+91 (555) 123-4567",
+    email: "hello@emuski.com",
+    mapUrl: "https://maps.google.com/maps?q=Rudhra+Coworks+Electronic+City+Phase+2+Bangalore+126+RNS+Plaza+KIADB+Industrial+Area+near+Tech+Mahindra+Gate+next+to+Hyderabad+Magic+Bengaluru+Karnataka+560100&t=&z=15&ie=UTF8&iwloc=&output=embed"
   }
 ];
 
@@ -448,6 +437,34 @@ export const Contact = () => {
                       </div>
                     </Card>
                   ))}
+                </div>
+
+                {/* Google Maps */}
+                <div className="mt-8">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Find Us on Map</h3>
+                  <div className="relative h-80 sm:h-96 rounded-lg overflow-hidden border-2 border-gray-200">
+                    <iframe
+                      src={offices[0].mapUrl}
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="EMuski Office Location - Rudhra Coworks, Electronic City Phase 2, Bangalore"
+                      className="w-full h-full"
+                    ></iframe>
+                  </div>
+                  <div className="mt-4 text-center">
+                    <Button 
+                      variant="outline" 
+                      className="border-emuski-teal text-emuski-teal hover:bg-emuski-teal hover:text-white"
+                      onClick={() => window.open(`https://www.google.com/maps/dir/?api=1&destination=Rudhra+Coworks+Electronic+City+Phase+2+Bangalore+126+RNS+Plaza+KIADB+Industrial+Area+near+Tech+Mahindra+Gate+next+to+Hyderabad+Magic+Bengaluru+Karnataka+560100`, '_blank')}
+                    >
+                      <MapPin className="h-4 w-4 mr-2" />
+                      Get Directions
+                    </Button>
+                  </div>
                 </div>
 
                 {/* Social Links */}

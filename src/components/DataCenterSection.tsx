@@ -6,93 +6,93 @@ import { Button } from "./ui/button";
 const serviceItems = [
   // Engineering Services
   {
-    category: "Engineering Services",
-    title: "Product Cost Estimation",
-    description: "Data-driven cost models helping OEMs forecast and optimize product costs with precision.",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&q=80",
-    link: "/blog"
+    category: "Precision Engineering",
+    title: "CNC Machining Excellence",
+    description: "High-precision CNC machining capabilities delivering complex geometries with tight tolerances for automotive and aerospace applications.",
+    image: "/src/assets/componets/Part - Photos/IMG-20250310-WA0011.jpg",
+    link: "/precision-engineering"
   },
   {
     category: "Engineering Services",
-    title: "VAVE - Teardown & Benchmarking",
-    description: "Comprehensive analysis identifying cost reduction opportunities through detailed teardown and benchmarking studies.",
-    image: "https://images.unsplash.com/photo-1639322537228-f710d846310a?w=400&q=80",
-    link: "/blog"
+    title: "Component Design & Validation",
+    description: "Complete product development lifecycle from concept to production, including rapid prototyping and validation services.",
+    image: "/src/assets/componets/forus/WhatsApp Image 2025-08-23 at 10.06.37 PM.jpeg",
+    link: "/precision-engineering"
   },
   {
-    category: "Engineering Services",
-    title: "Strategic Sourcing Support",
-    description: "End-to-end sourcing solutions connecting OEMs with reliable, cost-effective quality suppliers.",
-    image: "https://images.unsplash.com/photo-1566207474742-de921626ad0c?w=400&q=80",
-    link: "/blog"
+    category: "Quality Assurance",
+    title: "Quality Control Systems",
+    description: "Advanced quality inspection and testing protocols ensuring every component meets exact specifications and industry standards.",
+    image: "/src/assets/componets/Part - Photos/IMG-20250519-WA0016.jpg",
+    link: "/precision-engineering"
   },
   {
-    category: "Engineering Services",
-    title: "Expert Engineer Support",
-    description: "Experienced Should-Costing and VAVE Engineers integrated seamlessly into your project teams.",
-    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=400&q=80",
-    link: "/blog"
+    category: "Custom Solutions",
+    title: "Fixture Design & Tooling",
+    description: "Custom-designed fixtures and tooling solutions to optimize manufacturing processes and ensure consistent component quality.",
+    image: "/src/assets/componets/3.Oct 25/cent_fixture/WhatsApp Image 2025-10-27 at 3.21.23 PM.jpeg",
+    link: "/manufacturing-services"
   },
   // Manufacturing Services
   {
     category: "Manufacturing Services",
-    title: "Rapid Prototyping",
-    description: "Fast-turn prototypes bringing concepts to life with advanced NPD Center capabilities.",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&q=80",
-    link: "/blog"
+    title: "Production Line Excellence",
+    description: "Professional production line setup and manufacturing excellence with advanced assembly stations and workflow optimization.",
+    image: "/src/assets/componets/Matica Photos2/DSC_1008.JPG",
+    link: "/manufacturing-services"
   },
   {
     category: "Manufacturing Services",
-    title: "On-demand Manufacturing",
-    description: "Flexible production solutions adapting to evolving OEM requirements with precision and speed.",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80",
-    link: "/blog"
+    title: "Precision Component Manufacturing",
+    description: "High-precision manufactured components showcasing our CNC machining capabilities and partnership with automotive OEMs.",
+    image: "/src/assets/componets/Part - Photos/IMG-20250206-WA0025.jpg",
+    link: "/manufacturing-services"
   },
   // Next-Gen AI Services
   {
     category: "Next-Gen AI",
     title: "Mithran AI Platform",
-    description: "AI-powered platform delivering 30% faster sourcing cycles and 15% cost savings for OEMs.",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&q=80",
-    link: "/blog"
+    description: "AI-powered intelligence for smarter product development, supply chain, and cost optimization delivering measurable results for OEMs.",
+    image: "/src/assets/componets/3.Oct 25/WhatsApp Image 2025-08-28 at 10.34.17 AM.jpeg",
+    link: "/solutions/ai"
   },
 ];
 
 const quickLineupServices = [
   {
-    title: "Product Cost Estimation",
+    title: "CNC Machining Excellence",
+    category: "Precision Engineering",
+    link: "/precision-engineering"
+  },
+  {
+    title: "Component Design & Validation", 
     category: "Engineering Services",
-    link: "/blog"
+    link: "/precision-engineering"
   },
   {
-    title: "VAVE - Teardown & Benchmarking", 
-    category: "Engineering Services",
-    link: "/blog"
+    title: "Quality Control Systems",
+    category: "Quality Assurance", 
+    link: "/precision-engineering"
   },
   {
-    title: "Strategic Sourcing Support",
-    category: "Engineering Services", 
-    link: "/blog"
+    title: "Fixture Design & Tooling",
+    category: "Custom Solutions",
+    link: "/manufacturing-services"
   },
   {
-    title: "Expert Engineer Support",
-    category: "Engineering Services",
-    link: "/blog"
-  },
-  {
-    title: "Rapid Prototyping",
+    title: "Production Line Excellence",
     category: "Manufacturing Services",
-    link: "/blog"
+    link: "/manufacturing-services"
   },
   {
-    title: "On-demand Manufacturing",
+    title: "Precision Component Manufacturing",
     category: "Manufacturing Services", 
-    link: "/blog"
+    link: "/manufacturing-services"
   },
   {
     title: "Mithran AI Platform",
     category: "Next-Gen AI",
-    link: "/blog"
+    link: "/solutions/ai"
   }
 ];
 
