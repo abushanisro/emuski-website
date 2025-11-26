@@ -2,7 +2,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import autonomousHero from "@/assets/autonomous-hero.jpg";
+const autonomousHero = "/autonomous-hero.jpg";
 import { Cpu, Zap, Shield, Layers } from "lucide-react";
 
 const AutonomousMachines = () => {
@@ -107,17 +107,17 @@ const AutonomousMachines = () => {
                 {
                   title: "Autonomous Vehicles",
                   description: "Power self-driving cars with real-time perception and decision making",
-                  image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&q=80"
+                  image: "/assets/componets/3-Oct-25/WhatsApp Image 2025-08-28 at 10.34.17 AM.jpeg"
                 },
                 {
                   title: "Industrial Robotics",
                   description: "Enable smart factories with AI-powered robotic systems",
-                  image: "https://images.unsplash.com/photo-1565843708714-52ecf69ab81f?w=800&q=80"
+                  image: "/assets/componets/Matica-Photos2/DSC_1008.JPG"
                 },
                 {
                   title: "Smart Cities",
                   description: "Deploy intelligent infrastructure for urban management",
-                  image: "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&q=80"
+                  image: "/assets/componets/Part-Photos/IMG-20250519-WA0016.jpg"
                 }
               ].map((useCase, index) => (
                 <Card

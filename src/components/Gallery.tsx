@@ -3,7 +3,7 @@ import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 import { Search, Filter, Grid, List, Eye, Download, Play, Pause, ChevronLeft, ChevronRight } from "lucide-react";
 
-// Complete EMuski component gallery with consolidated manufacturing images
+// Complete EMUSKI component gallery with consolidated manufacturing images
 const galleryItems = [
   // October 2025 Manufacturing Excellence Story - Consolidated
   {
@@ -11,19 +11,19 @@ const galleryItems = [
     title: "October 2025 Production Excellence Initiative",
     category: "Recent Work",
     type: "gallery",
-    thumbnail: "/src/assets/componets/3.Oct 25/WhatsApp Image 2025-08-28 at 10.34.17 AM.jpeg",
+    thumbnail: "/assets/componets/3-Oct-25/WhatsApp Image 2025-08-28 at 10.34.17 AM.jpeg",
     images: [
-      "/src/assets/componets/3.Oct 25/WhatsApp Image 2025-08-28 at 10.34.17 AM.jpeg",
-      "/src/assets/componets/3.Oct 25/WhatsApp Image 2025-08-28 at 10.36.22 AM.jpeg",
-      "/src/assets/componets/3.Oct 25/WhatsApp Image 2025-08-28 at 11.05.36 AM.jpeg",
-      "/src/assets/componets/3.Oct 25/WhatsApp Image 2025-09-03 at 11.58.16 AM.jpeg",
-      "/src/assets/componets/3.Oct 25/WhatsApp Image 2025-09-03 at 11.58.40 AM.jpeg",
-      "/src/assets/componets/3.Oct 25/WhatsApp Image 2025-09-03 at 11.58.58 AM.jpeg",
-      "/src/assets/componets/3.Oct 25/WhatsApp Image 2025-09-15 at 12.00.26 PM (1).jpeg",
-      "/src/assets/componets/3.Oct 25/WhatsApp Image 2025-09-15 at 12.00.26 PM.jpeg"
+      "/assets/componets/3-Oct-25/WhatsApp Image 2025-08-28 at 10.34.17 AM.jpeg",
+      "/assets/componets/3-Oct-25/WhatsApp Image 2025-08-28 at 10.36.22 AM.jpeg",
+      "/assets/componets/3-Oct-25/WhatsApp Image 2025-08-28 at 11.05.36 AM.jpeg",
+      "/assets/componets/3-Oct-25/WhatsApp Image 2025-09-03 at 11.58.16 AM.jpeg",
+      "/assets/componets/3-Oct-25/WhatsApp Image 2025-09-03 at 11.58.40 AM.jpeg",
+      "/assets/componets/3-Oct-25/WhatsApp Image 2025-09-03 at 11.58.58 AM.jpeg",
+      "/assets/componets/3-Oct-25/WhatsApp Image 2025-09-15 at 12.00.26 PM (1).jpeg",
+      "/assets/componets/3-Oct-25/WhatsApp Image 2025-09-15 at 12.00.26 PM.jpeg"
     ],
-    image: "/src/assets/componets/3.Oct 25/WhatsApp Image 2025-08-28 at 10.34.17 AM.jpeg",
-    description: "EMuski's October 2025 manufacturing excellence initiative showcased our partnership with leading automotive OEMs, delivering critical components with unprecedented precision and speed. This comprehensive project included streamlined assembly operations, advanced quality validation systems, and seamless production transitions, resulting in 40% faster production cycles while maintaining ISO 9001:2015 quality standards.",
+    image: "/assets/componets/3-Oct-25/WhatsApp Image 2025-08-28 at 10.34.17 AM.jpeg",
+    description: "EMUSKI's October 2025 manufacturing excellence initiative showcased our partnership with leading automotive OEMs, delivering critical components with unprecedented precision and speed. This comprehensive project included streamlined assembly operations, advanced quality validation systems, and seamless production transitions, resulting in 40% faster production cycles while maintaining ISO 9001:2015 quality standards.",
     tags: ["October", "Production", "Excellence", "Components"]
   },
   
@@ -33,20 +33,20 @@ const galleryItems = [
     title: "Precision Centering Fixtures Collection",
     category: "Fixtures & Tooling",
     type: "gallery",
-    thumbnail: "/src/assets/componets/3.Oct 25/cent_fixture/WhatsApp Image 2025-10-27 at 3.21.23 PM.jpeg",
+    thumbnail: "/assets/componets/3-Oct-25/cent_fixture/WhatsApp Image 2025-10-27 at 3.21.23 PM.jpeg",
     images: [
-      "/src/assets/componets/3.Oct 25/cent_fixture/WhatsApp Image 2025-10-27 at 3.21.23 PM.jpeg",
-      "/src/assets/componets/3.Oct 25/cent_fixture/WhatsApp Image 2025-10-27 at 3.21.56 PM.jpeg",
-      "/src/assets/componets/3.Oct 25/cent_fixture/WhatsApp Image 2025-10-27 at 3.22.40 PM.jpeg",
-      "/src/assets/componets/3.Oct 25/cent_fixture/WhatsApp Image 2025-10-27 at 3.23.17 PM.jpeg",
-      "/src/assets/componets/3.Oct 25/cent_fixture/WhatsApp Image 2025-10-27 at 3.23.56 PM.jpeg",
-      "/src/assets/componets/3.Oct 25/cent_fixture/WhatsApp Image 2025-10-27 at 3.24.36 PM.jpeg",
-      "/src/assets/componets/3.Oct 25/cent_fixture/WhatsApp Image 2025-10-27 at 3.25.16 PM.jpeg",
-      "/src/assets/componets/3.Oct 25/cent_fixture/WhatsApp Image 2025-10-27 at 3.26.01 PM.jpeg",
-      "/src/assets/componets/3.Oct 25/cent_fixture/WhatsApp Image 2025-10-27 at 3.26.20 PM.jpeg"
+      "/assets/componets/3-Oct-25/cent_fixture/WhatsApp Image 2025-10-27 at 3.21.23 PM.jpeg",
+      "/assets/componets/3-Oct-25/cent_fixture/WhatsApp Image 2025-10-27 at 3.21.56 PM.jpeg",
+      "/assets/componets/3-Oct-25/cent_fixture/WhatsApp Image 2025-10-27 at 3.22.40 PM.jpeg",
+      "/assets/componets/3-Oct-25/cent_fixture/WhatsApp Image 2025-10-27 at 3.23.17 PM.jpeg",
+      "/assets/componets/3-Oct-25/cent_fixture/WhatsApp Image 2025-10-27 at 3.23.56 PM.jpeg",
+      "/assets/componets/3-Oct-25/cent_fixture/WhatsApp Image 2025-10-27 at 3.24.36 PM.jpeg",
+      "/assets/componets/3-Oct-25/cent_fixture/WhatsApp Image 2025-10-27 at 3.25.16 PM.jpeg",
+      "/assets/componets/3-Oct-25/cent_fixture/WhatsApp Image 2025-10-27 at 3.26.01 PM.jpeg",
+      "/assets/componets/3-Oct-25/cent_fixture/WhatsApp Image 2025-10-27 at 3.26.20 PM.jpeg"
     ],
-    image: "/src/assets/componets/3.Oct 25/cent_fixture/WhatsApp Image 2025-10-27 at 3.21.23 PM.jpeg",
-    description: "Comprehensive collection of custom-designed centering fixtures showcasing EMuski's precision manufacturing capabilities. These fixtures demonstrate our expertise in advanced tooling design, specialized manufacturing requirements, and integration of tooling systems for comprehensive manufacturing solutions. From initial design through final assembly, each fixture represents our commitment to manufacturing excellence.",
+    image: "/assets/componets/3-Oct-25/cent_fixture/WhatsApp Image 2025-10-27 at 3.21.23 PM.jpeg",
+    description: "Comprehensive collection of custom-designed centering fixtures showcasing EMUSKI's precision manufacturing capabilities. These fixtures demonstrate our expertise in advanced tooling design, specialized manufacturing requirements, and integration of tooling systems for comprehensive manufacturing solutions. From initial design through final assembly, each fixture represents our commitment to manufacturing excellence.",
     tags: ["Fixtures", "Centering", "Precision", "Custom"]
   },
 
@@ -56,13 +56,13 @@ const galleryItems = [
     title: "Innaccel Project Manufacturing Solutions",
     category: "Client Projects",
     type: "gallery",
-    thumbnail: "/src/assets/componets/3.Oct 25/innaccel/WhatsApp Image 2025-10-22 at 10.33.50 AM.jpeg",
+    thumbnail: "/assets/componets/3-Oct-25/innaccel/WhatsApp Image 2025-10-22 at 10.33.50 AM.jpeg",
     images: [
-      "/src/assets/componets/3.Oct 25/innaccel/WhatsApp Image 2025-10-22 at 10.33.50 AM.jpeg",
-      "/src/assets/componets/3.Oct 25/innaccel/WhatsApp Image 2025-10-22 at 10.34.03 AM.jpeg"
+      "/assets/componets/3-Oct-25/innaccel/WhatsApp Image 2025-10-22 at 10.33.50 AM.jpeg",
+      "/assets/componets/3-Oct-25/innaccel/WhatsApp Image 2025-10-22 at 10.34.03 AM.jpeg"
     ],
-    image: "/src/assets/componets/3.Oct 25/innaccel/WhatsApp Image 2025-10-22 at 10.33.50 AM.jpeg",
-    description: "Specialized manufacturing solutions developed for Innaccel project requirements, showcasing EMuski's ability to deliver custom engineering solutions for unique industrial applications.",
+    image: "/assets/componets/3-Oct-25/innaccel/WhatsApp Image 2025-10-22 at 10.33.50 AM.jpeg",
+    description: "Specialized manufacturing solutions developed for Innaccel project requirements, showcasing EMUSKI's ability to deliver custom engineering solutions for unique industrial applications.",
     tags: ["Innaccel", "Project", "Specialized", "Manufacturing"]
   },
 
@@ -72,25 +72,25 @@ const galleryItems = [
     title: "Matica Production Line Excellence",
     category: "Production Systems",
     type: "gallery",
-    thumbnail: "/src/assets/componets/Matica Photos2/DSC_1006.JPG",
+    thumbnail: "/assets/componets/Matica-Photos2/DSC_1006.JPG",
     images: [
-      "/src/assets/componets/Matica Photos2/DSC_1006.JPG",
-      "/src/assets/componets/Matica Photos2/DSC_1008.JPG",
-      "/src/assets/componets/Matica Photos2/DSC_1009.JPG",
-      "/src/assets/componets/Matica Photos2/DSC_1010.JPG",
-      "/src/assets/componets/Matica Photos2/DSC_1011.JPG",
-      "/src/assets/componets/Matica Photos2/DSC_1012.JPG",
-      "/src/assets/componets/Matica Photos2/DSC_1013.JPG",
-      "/src/assets/componets/Matica Photos2/DSC_1014.JPG",
-      "/src/assets/componets/Matica Photos2/DSC_1015.JPG",
-      "/src/assets/componets/Matica Photos2/DSC_1016.JPG",
-      "/src/assets/componets/Matica Photos2/DSC_1017.JPG",
-      "/src/assets/componets/Matica Photos2/DSC_1018.JPG",
-      "/src/assets/componets/Matica Photos2/DSC_1019.JPG",
-      "/src/assets/componets/Matica Photos2/DSC_1020.JPG"
+      "/assets/componets/Matica-Photos2/DSC_1006.JPG",
+      "/assets/componets/Matica-Photos2/DSC_1008.JPG",
+      "/assets/componets/Matica-Photos2/DSC_1009.JPG",
+      "/assets/componets/Matica-Photos2/DSC_1010.JPG",
+      "/assets/componets/Matica-Photos2/DSC_1011.JPG",
+      "/assets/componets/Matica-Photos2/DSC_1012.JPG",
+      "/assets/componets/Matica-Photos2/DSC_1013.JPG",
+      "/assets/componets/Matica-Photos2/DSC_1014.JPG",
+      "/assets/componets/Matica-Photos2/DSC_1015.JPG",
+      "/assets/componets/Matica-Photos2/DSC_1016.JPG",
+      "/assets/componets/Matica-Photos2/DSC_1017.JPG",
+      "/assets/componets/Matica-Photos2/DSC_1018.JPG",
+      "/assets/componets/Matica-Photos2/DSC_1019.JPG",
+      "/assets/componets/Matica-Photos2/DSC_1020.JPG"
     ],
-    image: "/src/assets/componets/Matica Photos2/DSC_1006.JPG",
-    description: "Professional production line setup and manufacturing excellence for Matica project. This comprehensive collection showcases our advanced assembly stations, quality assurance processes, manufacturing workflow optimization, and cutting-edge production technology implementation, demonstrating EMuski's commitment to operational excellence and process innovation.",
+    image: "/assets/componets/Matica-Photos2/DSC_1006.JPG",
+    description: "Professional production line setup and manufacturing excellence for Matica project. This comprehensive collection showcases our advanced assembly stations, quality assurance processes, manufacturing workflow optimization, and cutting-edge production technology implementation, demonstrating EMUSKI's commitment to operational excellence and process innovation.",
     tags: ["Matica", "Production", "Excellence", "Professional"]
   },
 
@@ -100,19 +100,19 @@ const galleryItems = [
     title: "Precision Manufacturing Components",
     category: "CNC Machining & Parts",
     type: "gallery",
-    thumbnail: "/src/assets/componets/Part - Photos/IMG-20250206-WA0025.jpg",
+    thumbnail: "/assets/componets/Part-Photos/IMG-20250206-WA0025.jpg",
     images: [
-      "/src/assets/componets/Part - Photos/IMG-20250206-WA0025.jpg",
-      "/src/assets/componets/Part - Photos/IMG-20250310-WA0011.jpg",
-      "/src/assets/componets/Part - Photos/IMG-20250519-WA0016.jpg",
-      "/src/assets/componets/Part - Photos/IMG-20250519-WA0017.jpg",
-      "/src/assets/componets/Part - Photos/IMG-20250519-WA0018.jpg",
-      "/src/assets/componets/Part - Photos/IMG-20250519-WA0019.jpg",
-      "/src/assets/componets/Part - Photos/IMG-20250519-WA0020.jpg",
-      "/src/assets/componets/Part - Photos/IMG-20250519-WA0021.jpg"
+      "/assets/componets/Part-Photos/IMG-20250206-WA0025.jpg",
+      "/assets/componets/Part-Photos/IMG-20250310-WA0011.jpg",
+      "/assets/componets/Part-Photos/IMG-20250519-WA0016.jpg",
+      "/assets/componets/Part-Photos/IMG-20250519-WA0017.jpg",
+      "/assets/componets/Part-Photos/IMG-20250519-WA0018.jpg",
+      "/assets/componets/Part-Photos/IMG-20250519-WA0019.jpg",
+      "/assets/componets/Part-Photos/IMG-20250519-WA0020.jpg",
+      "/assets/componets/Part-Photos/IMG-20250519-WA0021.jpg"
     ],
-    image: "/src/assets/componets/Part - Photos/IMG-20250206-WA0025.jpg",
-    description: "High-precision manufactured components showcasing EMuski's CNC machining capabilities and quality control excellence. These components represent our partnership with automotive OEMs and industrial clients, demonstrating our ability to deliver complex geometries with tight tolerances and exceptional surface finishes.",
+    image: "/assets/componets/Part-Photos/IMG-20250206-WA0025.jpg",
+    description: "High-precision manufactured components showcasing EMUSKI's CNC machining capabilities and quality control excellence. These components represent our partnership with automotive OEMs and industrial clients, demonstrating our ability to deliver complex geometries with tight tolerances and exceptional surface finishes.",
     tags: ["Components", "CNC", "Precision", "Manufacturing"]
   },
 
@@ -122,12 +122,12 @@ const galleryItems = [
     title: "Forus Partnership Engineering Excellence",
     category: "Client Projects", 
     type: "gallery",
-    thumbnail: "/src/assets/componets/forus/WhatsApp Image 2025-08-23 at 10.06.37 PM.jpeg",
+    thumbnail: "/assets/componets/forus/WhatsApp Image 2025-08-23 at 10.06.37 PM.jpeg",
     images: [
-      "/src/assets/componets/forus/WhatsApp Image 2025-08-23 at 10.06.37 PM.jpeg"
+      "/assets/componets/forus/WhatsApp Image 2025-08-23 at 10.06.37 PM.jpeg"
     ],
-    image: "/src/assets/componets/forus/WhatsApp Image 2025-08-23 at 10.06.37 PM.jpeg",
-    description: "Strategic partnership with Forus showcasing EMuski's rapid prototyping and engineering validation capabilities, enabling accelerated product development cycles for our B2B manufacturing partners.",
+    image: "/assets/componets/forus/WhatsApp Image 2025-08-23 at 10.06.37 PM.jpeg",
+    description: "Strategic partnership with Forus showcasing EMUSKI's rapid prototyping and engineering validation capabilities, enabling accelerated product development cycles for our B2B manufacturing partners.",
     tags: ["Forus", "Partnership", "Engineering", "Prototyping"]
   }
 ];
@@ -173,12 +173,12 @@ export const Gallery = () => {
 
   // Set SEO meta tags for gallery page
   useEffect(() => {
-    document.title = "EMuski Component Gallery - Manufacturing Excellence Showcase";
+    document.title = "EMUSKI Component Gallery - Manufacturing Excellence Showcase";
     
     // Set meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Explore EMuski\'s comprehensive gallery of precision manufacturing components, engineering solutions, and production excellence. Showcasing automotive, aerospace, and industrial manufacturing capabilities.');
+      metaDescription.setAttribute('content', 'Explore EMUSKI\'s comprehensive gallery of precision manufacturing components, engineering solutions, and production excellence. Showcasing automotive, aerospace, and industrial manufacturing capabilities.');
     }
   }, []);
 
@@ -224,17 +224,28 @@ export const Gallery = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-20">
-      <div className="container mx-auto px-4 sm:px-6">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-            Manufacturing Excellence Gallery
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Explore EMuski's comprehensive portfolio of precision manufacturing, engineering solutions, and production excellence across automotive, aerospace, and industrial sectors.
-          </p>
+    <div className="min-h-screen bg-gray-50">
+      {/* Header Section */}
+      <section className="relative bg-emuski-teal-darker text-white overflow-hidden pt-24 pb-16 sm:pt-32 sm:pb-24">
+        <div className="absolute inset-0 opacity-10 pointer-events-none">
+          <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
         </div>
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
+          <div className="max-w-4xl mx-auto text-center space-y-6 mt-8">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight" style={{color: 'rgb(18, 26, 33)'}}>
+              Manufacturing Excellence Gallery
+            </h1>
+            <p className="text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
+              Explore EMUSKI's comprehensive portfolio of precision manufacturing, engineering solutions, and production excellence across automotive, aerospace, and industrial sectors.
+            </p>
+            <div className="h-1 w-24 bg-white rounded-full mx-auto"></div>
+          </div>
+        </div>
+      </section>
+      
+      <div className="container mx-auto px-4 sm:px-6 py-20">
+        {/* Content moved here */}
+        <div className="mb-12"></div>
 
         {/* Search and Filter Controls */}
         <div className="mb-8 space-y-4 lg:space-y-0 lg:flex lg:items-center lg:justify-between">

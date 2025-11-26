@@ -6,33 +6,33 @@ import { Card } from "./ui/card";
 const recommendations = [
   {
     title: "Automotive Excellence Partnership",
-    description: "EMuski delivered 500,000 precision brake components for a Tier-1 automotive supplier, achieving zero defects across 18 months of production",
-    image: "/src/assets/componets/Part - Photos/IMG-20250206-WA0025.jpg"
+    description: "EMUSKI delivered 500,000 precision brake components for a Tier-1 automotive supplier, achieving zero defects across 18 months of production",
+    image: "/assets/componets/Part-Photos/IMG-20250206-WA0025.jpg"
   },
   {
     title: "Aerospace Innovation Story",
     description: "Our 5-axis CNC capabilities enabled a aerospace client to reduce component weight by 35% while improving structural integrity for next-gen aircraft",
-    image: "/src/assets/componets/Part - Photos/IMG-20250310-WA0011.jpg"
+    image: "/assets/componets/Part-Photos/IMG-20250310-WA0011.jpg"
   },
   {
     title: "Medical Device Success",
-    description: "EMuski's cleanroom assembly operations helped a medical device startup achieve FDA approval 4 months ahead of schedule, accelerating life-saving technology to market",
-    image: "/src/assets/componets/Matica Photos2/DSC_1006.JPG"
+    description: "EMUSKI's cleanroom assembly operations helped a medical device startup achieve FDA approval 4 months ahead of schedule, accelerating life-saving technology to market",
+    image: "/assets/componets/Matica-Photos2/DSC_1006.JPG"
   },
   {
     title: "Defense Contract Achievement",
-    description: "Our quality systems exceeded military specifications, earning EMuski a 5-year contract for critical defense components valued at $12M annually",
-    image: "/src/assets/componets/Part - Photos/IMG-20250519-WA0016.jpg"
+    description: "Our quality systems exceeded military specifications, earning EMUSKI a 5-year contract for critical defense components valued at $12M annually",
+    image: "/assets/componets/Part-Photos/IMG-20250519-WA0016.jpg"
   },
   {
     title: "Smart Factory Implementation",
     description: "Our custom fixture design reduced cycle time by 45% for an electronics manufacturer, increasing annual capacity from 800K to 1.2M units with same workforce",
-    image: "/src/assets/componets/3.Oct 25/cent_fixture/WhatsApp Image 2025-10-27 at 3.21.23 PM.jpeg"
+    image: "/assets/componets/3-Oct-25/cent_fixture/WhatsApp Image 2025-10-27 at 3.21.23 PM.jpeg"
   },
   {
     title: "R&D Partnership Success",
-    description: "EMuski's rapid prototyping enabled a Fortune 500 client to test 15 design iterations in 3 weeks, accelerating product launch by 6 months in competitive market",
-    image: "/src/assets/componets/forus/WhatsApp Image 2025-08-23 at 10.06.37 PM.jpeg"
+    description: "EMUSKI's rapid prototyping enabled a Fortune 500 client to test 15 design iterations in 3 weeks, accelerating product launch by 6 months in competitive market",
+    image: "/assets/componets/forus/WhatsApp Image 2025-08-23 at 10.06.37 PM.jpeg"
   }
 ];
 
@@ -54,7 +54,7 @@ export const RecommendedSection = () => {
       
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="flex items-center justify-between mb-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white">Our Manufacturing Capabilities</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-white">Our Manufacturing Excellence</h2>
           
           <div className="hidden sm:flex space-x-2">
             <Button

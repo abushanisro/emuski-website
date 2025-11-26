@@ -9,28 +9,28 @@ const serviceItems = [
     category: "Precision Engineering",
     title: "CNC Machining Excellence",
     description: "High-precision CNC machining capabilities delivering complex geometries with tight tolerances for automotive and aerospace applications.",
-    image: "/src/assets/componets/Part - Photos/IMG-20250310-WA0011.jpg",
+    image: "/assets/componets/Part-Photos/IMG-20250310-WA0011.jpg",
     link: "/precision-engineering"
   },
   {
     category: "Engineering Services",
     title: "Component Design & Validation",
     description: "Complete product development lifecycle from concept to production, including rapid prototyping and validation services.",
-    image: "/src/assets/componets/forus/WhatsApp Image 2025-08-23 at 10.06.37 PM.jpeg",
+    image: "/assets/componets/forus/WhatsApp Image 2025-08-23 at 10.06.37 PM.jpeg",
     link: "/precision-engineering"
   },
   {
     category: "Quality Assurance",
     title: "Quality Control Systems",
     description: "Advanced quality inspection and testing protocols ensuring every component meets exact specifications and industry standards.",
-    image: "/src/assets/componets/Part - Photos/IMG-20250519-WA0016.jpg",
+    image: "/assets/componets/Part-Photos/IMG-20250519-WA0016.jpg",
     link: "/precision-engineering"
   },
   {
     category: "Custom Solutions",
     title: "Fixture Design & Tooling",
     description: "Custom-designed fixtures and tooling solutions to optimize manufacturing processes and ensure consistent component quality.",
-    image: "/src/assets/componets/3.Oct 25/cent_fixture/WhatsApp Image 2025-10-27 at 3.21.23 PM.jpeg",
+    image: "/assets/componets/3-Oct-25/cent_fixture/WhatsApp Image 2025-10-27 at 3.21.23 PM.jpeg",
     link: "/manufacturing-services"
   },
   // Manufacturing Services
@@ -38,14 +38,14 @@ const serviceItems = [
     category: "Manufacturing Services",
     title: "Production Line Excellence",
     description: "Professional production line setup and manufacturing excellence with advanced assembly stations and workflow optimization.",
-    image: "/src/assets/componets/Matica Photos2/DSC_1008.JPG",
+    image: "/assets/componets/Matica-Photos2/DSC_1008.JPG",
     link: "/manufacturing-services"
   },
   {
     category: "Manufacturing Services",
     title: "Precision Component Manufacturing",
     description: "High-precision manufactured components showcasing our CNC machining capabilities and partnership with automotive OEMs.",
-    image: "/src/assets/componets/Part - Photos/IMG-20250206-WA0025.jpg",
+    image: "/assets/componets/Part-Photos/IMG-20250206-WA0025.jpg",
     link: "/manufacturing-services"
   },
   // Next-Gen AI Services
@@ -53,7 +53,7 @@ const serviceItems = [
     category: "Next-Gen AI",
     title: "Mithran AI Platform",
     description: "AI-powered intelligence for smarter product development, supply chain, and cost optimization delivering measurable results for OEMs.",
-    image: "/src/assets/componets/3.Oct 25/WhatsApp Image 2025-08-28 at 10.34.17 AM.jpeg",
+    image: "/assets/componets/3-Oct-25/WhatsApp Image 2025-08-28 at 10.34.17 AM.jpeg",
     link: "/solutions/ai"
   },
 ];

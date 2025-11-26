@@ -2,7 +2,7 @@ import { Menu, Home, ChevronDown } from "lucide-react";
 import { Button } from "./ui/button";
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
-import emuskiLogo from "../assets/Emuski Logo.svg";
+const emuskiLogo = "/Emuski Logo.svg";
 
 interface NavItem {
   name: string;
@@ -50,7 +50,6 @@ const navigationConfig = {
     { name: "Blog", path: "/blog" }
   ],
   rightMenu: [
-    { name: "Capabilities", path: "/capabilities", hideOnMobile: true },
     { name: "Gallery", path: "/gallery" },
     { name: "Contact", path: "/contact", hideOnMobile: true }
   ],
@@ -78,7 +77,6 @@ const navigationConfig = {
     {
       title: "Company",
       items: [
-        { name: "Capabilities", path: "/capabilities" },
         { name: "Gallery", path: "/gallery" },
         { name: "Contact", path: "/contact" }
       ]
@@ -93,7 +91,6 @@ const routeToPageName: Record<string, string> = {
   "/precision-engineering": "Precision Engineering", 
   "/industries": "Industries",
   "/blog": "Blog",
-  "/capabilities": "Capabilities",
   "/gallery": "Gallery",
   "/contact": "Contact"
 };
@@ -258,7 +255,7 @@ className={getLinkClasses(item.path)}
 ))}
 </div>
 
-<span className="hidden sm:inline-block transition-colors text-sm font-medium text-emuski-teal-darker">
+<span className="sm:hidden transition-colors text-sm font-medium text-emuski-teal-darker">
 {getCurrentPageName()}
 </span>
 

@@ -11,14 +11,14 @@ const featuredContent = [
       {
         category: "Precision Engineering",
         title: "Automotive OEM Partnership Excellence",
-        description: "EMuski's precision engineering team delivered critical transmission components for a leading automotive OEM, achieving 99.8% quality standards while reducing production time by 25%.",
-        image: "/src/assets/componets/Part - Photos/IMG-20250310-WA0011.jpg"
+        description: "EMUSKI's precision engineering team delivered critical transmission components for a leading automotive OEM, achieving 99.8% quality standards while reducing production time by 25%.",
+        image: "/assets/componets/Part-Photos/IMG-20250310-WA0011.jpg"
       },
       {
         category: "Design & Validation",
         title: "Aerospace Innovation Partnership",
         description: "Our engineering excellence enabled a major aerospace client to launch their next-generation aircraft component 6 months ahead of schedule through collaborative design optimization.",
-        image: "/src/assets/componets/forus/WhatsApp Image 2025-08-23 at 10.06.37 PM.jpeg"
+        image: "/assets/componets/forus/WhatsApp Image 2025-08-23 at 10.06.37 PM.jpeg"
       }
     ]
   },
@@ -29,14 +29,14 @@ const featuredContent = [
       {
         category: "Production",
         title: "Manufacturing Scale-Up Success Story",
-        description: "EMuski partnered with an industrial equipment manufacturer to scale production from 100 to 10,000 units monthly, maintaining zero-defect quality while reducing per-unit costs by 30%.",
-        image: "/src/assets/componets/Matica Photos2/DSC_1008.JPG"
+        description: "EMUSKI partnered with an industrial equipment manufacturer to scale production from 100 to 10,000 units monthly, maintaining zero-defect quality while reducing per-unit costs by 30%.",
+        image: "/assets/componets/Matica-Photos2/DSC_1008.JPG"
       },
       {
         category: "Quality Assurance",
         title: "Medical Device Quality Excellence",
         description: "Our advanced quality systems helped a medical device client achieve FDA compliance ahead of schedule, enabling faster market entry for life-saving equipment.",
-        image: "/src/assets/componets/Part - Photos/IMG-20250519-WA0016.jpg"
+        image: "/assets/componets/Part-Photos/IMG-20250519-WA0016.jpg"
       }
     ]
   },
@@ -47,14 +47,14 @@ const featuredContent = [
       {
         category: "Automotive Components",
         title: "Tier-1 Automotive Supplier Achievement",
-        description: "EMuski became a trusted Tier-1 supplier for brake system components, delivering 2 million parts annually with 99.9% on-time delivery to global automotive giants.",
-        image: "/src/assets/componets/Part - Photos/IMG-20250206-WA0025.jpg"
+        description: "EMUSKI became a trusted Tier-1 supplier for brake system components, delivering 2 million parts annually with 99.9% on-time delivery to global automotive giants.",
+        image: "/assets/componets/Part-Photos/IMG-20250206-WA0025.jpg"
       },
       {
         category: "Custom Fixtures",
         title: "Smart Manufacturing Implementation",
         description: "Our custom fixture design reduced assembly time by 40% for an electronics manufacturer, enabling them to meet increased demand during peak season while maintaining quality standards.",
-        image: "/src/assets/componets/3.Oct 25/cent_fixture/WhatsApp Image 2025-10-27 at 3.21.23 PM.jpeg"
+        image: "/assets/componets/3-Oct-25/cent_fixture/WhatsApp Image 2025-10-27 at 3.21.23 PM.jpeg"
       }
     ]
   }

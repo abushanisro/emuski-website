@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { Card } from "./ui/card";
+import { Recaptcha } from "./ui/recaptcha";
 import { Check, Mail, AlertCircle, Loader2 } from "lucide-react";
 
 interface SubscriptionResponse {
@@ -13,6 +14,7 @@ export const EmailSubscription = ({ className = "", variant = "default" }: { cla
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -20,6 +22,12 @@ export const EmailSubscription = ({ className = "", variant = "default" }: { cla
     if (!email || !email.includes("@")) {
       setStatus("error");
       setMessage("Please enter a valid email address");
+      return;
+    }
+
+    if (!recaptchaToken) {
+      setStatus("error");
+      setMessage("Please complete the security verification");
       return;
     }
 
@@ -46,6 +54,7 @@ export const EmailSubscription = ({ className = "", variant = "default" }: { cla
         setStatus("success");
         setMessage("Successfully subscribed! Check your email for confirmation.");
         setEmail("");
+        setRecaptchaToken(null);
         
         // Track subscription event
         if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -59,6 +68,22 @@ export const EmailSubscription = ({ className = "", variant = "default" }: { cla
         setMessage(data.message || "Subscription failed. Please try again.");
       }
     } catch (error) {
+      // Send email notification for new subscription
+      const emailData = {
+        to: 'abushan.isro@gmail.com',
+        from: 'noreply@emuski.com',
+        subject: 'New Email Subscription - EMUSKI',
+        html: `
+          <h2>New Email Subscription</h2>
+          <p><strong>Email:</strong> ${email.trim().toLowerCase()}</p>
+          <p><strong>Source:</strong> Blog/Website</p>
+          <p><strong>Interests:</strong> Manufacturing, Engineering, AI</p>
+          <p><strong>Subscribed:</strong> ${new Date().toLocaleString()}</p>
+        `
+      };
+      
+      console.log('📧 SUBSCRIPTION EMAIL TO SEND TO abushan.isro@gmail.com:', emailData);
+      
       // Fallback: Store in localStorage for now (replace with proper backend)
       const subscribers = JSON.parse(localStorage.getItem("emuski_subscribers") || "[]");
       const existingSubscriber = subscribers.find((sub: any) => sub.email === email.trim().toLowerCase());
@@ -73,7 +98,8 @@ export const EmailSubscription = ({ className = "", variant = "default" }: { cla
           subscribeDate: new Date().toISOString(),
           status: "active",
           source: "blog",
-          interests: ["manufacturing", "engineering", "AI"]
+          interests: ["manufacturing", "engineering", "AI"],
+          recaptchaToken
         };
         
         subscribers.push(newSubscriber);
@@ -82,6 +108,7 @@ export const EmailSubscription = ({ className = "", variant = "default" }: { cla
         setStatus("success");
         setMessage("Successfully subscribed! You'll receive our daily manufacturing insights.");
         setEmail("");
+        setRecaptchaToken(null);
       }
     }
 
@@ -101,12 +128,12 @@ export const EmailSubscription = ({ className = "", variant = "default" }: { cla
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           className="flex-1 px-3 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-emuski-teal focus:border-transparent"
-          disabled={status === "loading" || status === "success"}
+          disabled={status === "loading" || status === "success" || !recaptchaToken}
         />
         <Button 
           type="submit"
-          disabled={status === "loading" || status === "success"}
-          className="bg-emuski-teal hover:bg-emuski-teal/90 text-white px-6 py-2"
+          disabled={status === "loading" || status === "success" || !recaptchaToken}
+          className="bg-emuski-teal hover:bg-emuski-teal/90 text-white px-6 py-2 disabled:bg-gray-400 disabled:cursor-not-allowed"
         >
           {status === "loading" ? (
             <Loader2 className="h-4 w-4 animate-spin" />
@@ -117,6 +144,16 @@ export const EmailSubscription = ({ className = "", variant = "default" }: { cla
           )}
         </Button>
       </form>
+      
+      {/* reCAPTCHA for compact variant */}
+      <div className="mt-3">
+        <Recaptcha 
+          onVerify={setRecaptchaToken}
+          onError={() => setRecaptchaToken(null)}
+          theme="light"
+          size="compact"
+        />
+      </div>
       
       {message && (
         <div className={`flex items-center space-x-2 text-sm ${
@@ -148,12 +185,12 @@ export const EmailSubscription = ({ className = "", variant = "default" }: { cla
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           className="w-full px-3 py-2 bg-white border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emuski-teal focus:border-transparent"
-          disabled={status === "loading" || status === "success"}
+          disabled={status === "loading" || status === "success" || !recaptchaToken}
         />
         <Button 
           type="submit"
-          disabled={status === "loading" || status === "success"}
-          className="w-full bg-emuski-teal hover:bg-emuski-teal/90 text-white"
+          disabled={status === "loading" || status === "success" || !recaptchaToken}
+          className="w-full bg-emuski-teal hover:bg-emuski-teal/90 text-white disabled:bg-gray-400 disabled:cursor-not-allowed"
         >
           {status === "loading" ? (
             <>
@@ -170,6 +207,16 @@ export const EmailSubscription = ({ className = "", variant = "default" }: { cla
           )}
         </Button>
       </form>
+
+      {/* reCAPTCHA for sidebar variant */}
+      <div className="mt-3">
+        <Recaptcha 
+          onVerify={setRecaptchaToken}
+          onError={() => setRecaptchaToken(null)}
+          theme="light"
+          size="compact"
+        />
+      </div>
 
       {message && (
         <div className={`mt-3 flex items-center space-x-2 text-sm ${
@@ -214,12 +261,12 @@ export const EmailSubscription = ({ className = "", variant = "default" }: { cla
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="flex-1 px-4 py-3 bg-white border border-gray-200 rounded-lg text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-emuski-teal focus:border-transparent shadow-sm"
-            disabled={status === "loading" || status === "success"}
+            disabled={status === "loading" || status === "success" || !recaptchaToken}
           />
           <Button 
             type="submit"
-            disabled={status === "loading" || status === "success"}
-            className="bg-emuski-teal hover:bg-emuski-teal/90 text-white px-12 py-4 text-lg font-semibold whitespace-nowrap"
+            disabled={status === "loading" || status === "success" || !recaptchaToken}
+            className="bg-emuski-teal hover:bg-emuski-teal/90 text-white px-12 py-4 text-lg font-semibold whitespace-nowrap h-auto min-h-[3rem] flex items-center justify-center disabled:bg-gray-400 disabled:cursor-not-allowed"
           >
             {status === "loading" ? (
               <>
@@ -235,6 +282,16 @@ export const EmailSubscription = ({ className = "", variant = "default" }: { cla
               "Subscribe Free"
             )}
           </Button>
+        </div>
+        
+        {/* reCAPTCHA for default variant */}
+        <div className="mt-4 flex justify-center">
+          <Recaptcha 
+            onVerify={setRecaptchaToken}
+            onError={() => setRecaptchaToken(null)}
+            theme="light"
+            size="normal"
+          />
         </div>
       </form>
 

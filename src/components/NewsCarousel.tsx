@@ -18,43 +18,43 @@ const successStories = [
   {
     category: "Automotive Excellence",
     title: "Tier-1 Automotive Supplier Achievement",
-    description: "EMuski became a trusted Tier-1 supplier for brake system components, delivering 2 million parts annually with 99.9% on-time delivery to global automotive giants.",
-    image: "/src/assets/componets/Part - Photos/IMG-20250206-WA0025.jpg",
+    description: "EMUSKI became a trusted Tier-1 supplier for brake system components, delivering 2 million parts annually with 99.9% on-time delivery to global automotive giants.",
+    image: "/assets/componets/Part-Photos/IMG-20250206-WA0025.jpg",
     link: "/gallery"
   },
   {
     category: "Precision Engineering",
     title: "October 2025 Production Excellence Initiative",
-    description: "EMuski launched an ambitious manufacturing excellence initiative, partnering with leading automotive OEMs to deliver critical components with unprecedented precision and speed.",
-    image: "/src/assets/componets/3.Oct 25/WhatsApp Image 2025-08-28 at 10.34.17 AM.jpeg",
+    description: "EMUSKI launched an ambitious manufacturing excellence initiative, partnering with leading automotive OEMs to deliver critical components with unprecedented precision and speed.",
+    image: "/assets/componets/3-Oct-25/WhatsApp Image 2025-08-28 at 10.34.17 AM.jpeg",
     link: "/gallery"
   },
   {
     category: "Smart Manufacturing",
     title: "Custom Fixture Implementation Success",
     description: "Our custom fixture design reduced assembly time by 40% for an electronics manufacturer, enabling them to meet increased demand during peak season while maintaining quality standards.",
-    image: "/src/assets/componets/3.Oct 25/cent_fixture/WhatsApp Image 2025-10-27 at 3.21.23 PM.jpeg",
+    image: "/assets/componets/3-Oct-25/cent_fixture/WhatsApp Image 2025-10-27 at 3.21.23 PM.jpeg",
     link: "/gallery"
   },
   {
     category: "Production Systems",
     title: "Matica Production Line Excellence",
     description: "Professional production line setup showcasing our advanced assembly stations, quality assurance processes, and manufacturing workflow optimization for operational excellence.",
-    image: "/src/assets/componets/Matica Photos2/DSC_1008.JPG",
+    image: "/assets/componets/Matica-Photos2/DSC_1008.JPG",
     link: "/gallery"
   },
   {
     category: "CNC Machining",
     title: "High-Precision Component Manufacturing",
     description: "Delivered complex geometries with tight tolerances and exceptional surface finishes for automotive OEMs, demonstrating our advanced CNC machining capabilities.",
-    image: "/src/assets/componets/Part - Photos/IMG-20250310-WA0011.jpg",
+    image: "/assets/componets/Part-Photos/IMG-20250310-WA0011.jpg",
     link: "/gallery"
   },
   {
     category: "Client Partnership",
     title: "Aerospace Innovation Partnership Success",
-    description: "Strategic partnership with Forus showcasing EMuski's rapid prototyping and engineering validation capabilities, enabling accelerated product development cycles for our B2B manufacturing partners.",
-    image: "/src/assets/componets/forus/WhatsApp Image 2025-08-23 at 10.06.37 PM.jpeg",
+    description: "Strategic partnership with Forus showcasing EMUSKI's rapid prototyping and engineering validation capabilities, enabling accelerated product development cycles for our B2B manufacturing partners.",
+    image: "/assets/componets/forus/WhatsApp Image 2025-08-23 at 10.06.37 PM.jpeg",
     link: "/gallery"
   }
 ];

@@ -3,7 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import aiSolutionsHero from "@/assets/ai-solutions-hero.jpg";
+const aiSolutionsHero = "/ai-solutions-hero.jpg";
 import { Brain, Sparkles, Database, Network, Code, Rocket } from "lucide-react";
 import { useState } from "react";
 
@@ -76,7 +76,7 @@ const AISolutions = () => {
                       What is Mithran?
                     </h2>
                     <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                      EMuski is building Mithran, a next-generation AI-driven engineering and manufacturing platform that acts as a digital backbone for OEMs. It is designed to simplify the entire product lifecycle—from design and costing to supplier management and project execution.
+                      EMUSKI is building Mithran, a next-generation AI-driven engineering and manufacturing platform that acts as a digital backbone for OEMs. It is designed to simplify the entire product lifecycle—from design and costing to supplier management and project execution.
                     </p>
                     <p className="text-lg text-muted-foreground leading-relaxed">
                       By combining automation, artificial intelligence, supplier networking, and real-time monitoring, Mithran will transform traditional workflows into a smart, data-driven ecosystem.
@@ -158,7 +158,7 @@ const AISolutions = () => {
                   <div>
                     <h2 className="text-3xl font-bold text-foreground mb-6">Looking Ahead</h2>
                     <p className="text-lg text-muted-foreground leading-relaxed">
-                      EMuski is building Mithran to help OEMs gain AI-powered intelligence, stronger control, and global competitiveness. Once launched, Mithran will be the platform that connects engineering precision with data-driven decision-making.
+                      EMUSKI is building Mithran to help OEMs gain AI-powered intelligence, stronger control, and global competitiveness. Once launched, Mithran will be the platform that connects engineering precision with data-driven decision-making.
                     </p>
                   </div>
                 </div>

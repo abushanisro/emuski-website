@@ -10,19 +10,19 @@ const Industries = () => {
       icon: <Activity className="h-12 w-12 text-primary" />,
       title: "Healthcare & Medical Devices",
       description: "Precision-manufactured medical components and devices meeting stringent FDA requirements, supporting life-saving technologies with exceptional quality standards.",
-      image: "/src/assets/componets/Part - Photos/IMG-20250519-WA0016.jpg"
+      image: "/assets/componets/Part-Photos/IMG-20250519-WA0016.jpg"
     },
     {
       icon: <Rocket className="h-12 w-12 text-primary" />,
       title: "Space Technology & Aerospace",
       description: "High-precision components for aerospace and space applications, delivering critical parts that withstand extreme environments with zero-defect manufacturing.",
-      image: "/src/assets/componets/Part - Photos/IMG-20250310-WA0011.jpg"
+      image: "/assets/componets/Part-Photos/IMG-20250310-WA0011.jpg"
     },
     {
       icon: <Shield className="h-12 w-12 text-primary" />,
       title: "Defense & Critical Systems",
       description: "Mission-critical components for defense applications, meeting military specifications with advanced quality systems and stringent security protocols.",
-      image: "/src/assets/componets/3.Oct 25/cent_fixture/WhatsApp Image 2025-10-27 at 3.21.23 PM.jpeg"
+      image: "/assets/componets/3-Oct-25/cent_fixture/WhatsApp Image 2025-10-27 at 3.21.23 PM.jpeg"
     }
   ];
 
@@ -38,19 +38,16 @@ const Industries = () => {
           
           <div className="container mx-auto px-6 relative z-10">
             <div className="max-w-4xl mx-auto text-center space-y-6">
-              <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+              <h1 className="text-5xl md:text-6xl font-bold leading-tight" style={{color: 'rgb(18, 26, 33)'}}>
                 Precision Manufacturing for Critical Industries
               </h1>
               
               <p className="text-xl text-white/90 leading-relaxed max-w-2xl mx-auto">
-                EMuski delivers precision-engineered components for healthcare, space technology, and defense applications where quality, reliability, and performance are mission-critical.
+                EMUSKI delivers precision-engineered components for healthcare, space technology, and defense applications where quality, reliability, and performance are mission-critical.
               </p>
               
               <div className="h-1 w-24 bg-white rounded-full mx-auto"></div>
               
-              <Button className="bg-white text-emuski-teal-darker hover:bg-gray-100 font-semibold px-8 py-4 text-lg">
-                Explore Our Capabilities
-              </Button>
             </div>
           </div>
         </section>
@@ -79,9 +76,6 @@ const Industries = () => {
                       alt={industry.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
-                    <div className="absolute bottom-4 left-4">
-                      {industry.icon}
-                    </div>
                   </div>
                   
                   <div className="p-6">
@@ -113,19 +107,19 @@ const Industries = () => {
                 {
                   company: "Leading Medical Device Manufacturer",
                   achievement: "FDA Approval Accelerated",
-                  description: "EMuski's precision manufacturing helped accelerate FDA approval by delivering medical device components that exceeded quality standards and regulatory requirements.",
+                  description: "EMUSKI's precision manufacturing helped accelerate FDA approval by delivering medical device components that exceeded quality standards and regulatory requirements.",
                   industry: "Healthcare"
                 },
                 {
                   company: "Space Technology Pioneer",
                   achievement: "Zero-Defect Mission Success",
-                  description: "Critical aerospace components manufactured by EMuski achieved 100% mission success rate in demanding space environments with zero component failures.",
+                  description: "Critical aerospace components manufactured by EMUSKI achieved 100% mission success rate in demanding space environments with zero component failures.",
                   industry: "Space Technology"
                 },
                 {
                   company: "Defense Contractor",
                   achievement: "$12M Annual Contract",
-                  description: "EMuski earned a 5-year defense contract valued at $12M annually by exceeding military specifications and stringent security requirements.",
+                  description: "EMUSKI earned a 5-year defense contract valued at $12M annually by exceeding military specifications and stringent security requirements.",
                   industry: "Defense"
                 },
                 {
@@ -168,7 +162,7 @@ const Industries = () => {
                 Precision Manufacturing
               </span>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
-                Partner with EMuski for Mission-Critical Components
+                Partner with EMUSKI for Mission-Critical Components
               </h2>
               <p className="text-lg sm:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto">
                 Connect with our engineering experts to explore precision manufacturing solutions for healthcare, space technology, and defense applications.

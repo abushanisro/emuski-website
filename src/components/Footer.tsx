@@ -1,4 +1,4 @@
-import emuskiLogo from "../assets/Emuski Logo.svg";
+const emuskiLogo = "/Emuski Logo.svg";
 
 export const Footer = () => {
   return (

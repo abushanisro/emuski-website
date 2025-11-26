@@ -15,18 +15,38 @@ import PrecisionEngineering from "./pages/PrecisionEngineering";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Gallery from "./pages/Gallery";
-import Capabilities from "./pages/Capabilities";
 import Contact from "./pages/Contact";
 import SubscriberDashboard from "./pages/SubscriberDashboard";
 import { WhatsAppChatbot } from "./components/WhatsAppChatbot";
 
-// ScrollToTop component
+// ScrollToTop component - ensures every page loads at the top
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
+  const { pathname, search } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    // Multiple methods to ensure scroll to top works across all browsers
+    
+    // Method 1: Modern browsers with options
+    try {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'instant'
+      });
+    } catch (error) {
+      // Method 2: Fallback for older browsers
+      window.scrollTo(0, 0);
+    }
+    
+    // Method 3: Direct DOM manipulation for edge cases
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    
+    // Method 4: Additional timeout for heavy pages
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 0);
+  }, [pathname, search]); // Trigger on route or query parameter changes
 
   return null;
 };
@@ -39,6 +59,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/autonomous-machines" element={<AutonomousMachines />} />
@@ -49,7 +70,6 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/gallery" element={<Gallery />} />
-          <Route path="/capabilities" element={<Capabilities />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/admin/subscribers" element={<SubscriberDashboard />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

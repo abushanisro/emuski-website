@@ -65,17 +65,21 @@ export const BlogPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-white pt-24 pb-16 sm:pt-32 sm:pb-24 border-b border-gray-100">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="max-w-4xl mx-auto text-center space-y-4 sm:space-y-6">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900">
-              EMUSKI <span className="text-emuski-teal">Insights</span>
+      <section className="relative bg-emuski-teal-darker text-white overflow-hidden pt-24 pb-16 sm:pt-32 sm:pb-24">
+        <div className="absolute inset-0 opacity-10 pointer-events-none">
+          <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+        </div>
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
+          <div className="max-w-4xl mx-auto text-center space-y-4 sm:space-y-6 mt-8">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
+              <span style={{color: 'rgb(18, 26, 33)'}}>EMUSKI</span> <span className="text-white">Insights</span>
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl text-white/90 leading-relaxed">
               Expert perspectives on engineering precision, manufacturing innovation, 
               and the future of intelligent production systems.
             </p>
-            <div className="flex items-center justify-center text-sm text-gray-500">
+            <div className="h-1 w-24 bg-white rounded-full mx-auto"></div>
+            <div className="flex items-center justify-center text-sm text-white/80">
               <span>Discover insights that drive manufacturing excellence</span>
             </div>
           </div>
@@ -85,7 +89,7 @@ export const BlogPage = () => {
       {/* Search and Filter Section */}
       <section className="py-12 border-b border-border relative overflow-hidden" style={{backgroundColor: 'rgb(18, 26, 33)'}}>
         <div className="absolute inset-0 opacity-10 pointer-events-none">
-          <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(to_right,#4fd3d4_1px,transparent_1px),linear-gradient(to_bottom,#4fd3d4_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(to_right,#4fd3d4_1px,transparent_1px),linear-gradient(to_bottom,#4fd3d4_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
         </div>
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-6xl mx-auto">

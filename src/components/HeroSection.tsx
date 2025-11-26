@@ -13,7 +13,7 @@ interface Slide {
 
 const slides: Slide[] = [
   {
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+    image: "/assets/componets/Part-Photos/IMG-20250310-WA0011.jpg",
     category: "Engineering",
     title: "Engineering Excellence",
     shortTitle: "Engineering",
@@ -21,7 +21,7 @@ const slides: Slide[] = [
     link: "/precision-engineering",
   },
   {
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+    image: "/assets/componets/Matica-Photos2/DSC_1008.JPG",
     category: "Manufacturing",
     title: "Manufacturing Excellence", 
     shortTitle: "Manufacturing",
@@ -29,7 +29,7 @@ const slides: Slide[] = [
     link: "/manufacturing-services",
   },
   {
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80",
+    image: "/assets/componets/3-Oct-25/WhatsApp Image 2025-08-28 at 10.34.17 AM.jpeg",
     category: "Next-Gen AI",
     title: "Next-Gen AI - Mithran",
     shortTitle: "NextGen AI",

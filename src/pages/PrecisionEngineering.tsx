@@ -5,7 +5,7 @@ const engineeringServices = [
   {
     title: "Precision CNC Machining",
     description: "State-of-the-art CNC machining capabilities delivering high-precision components for automotive and aerospace applications with tight tolerances.",
-    image: "/src/assets/componets/Part - Photos/IMG-20250310-WA0011.jpg",
+    image: "/assets/componets/Part-Photos/IMG-20250310-WA0011.jpg",
     features: [
       "5-axis CNC machining for complex geometries",
       "Tight tolerance manufacturing (±0.01mm)",
@@ -16,7 +16,7 @@ const engineeringServices = [
   {
     title: "Component Design & Validation",
     description: "Complete product development lifecycle from concept to production, including rapid prototyping and engineering validation services.",
-    image: "/src/assets/componets/forus/WhatsApp Image 2025-08-23 at 10.06.37 PM.jpeg",
+    image: "/assets/componets/forus/WhatsApp Image 2025-08-23 at 10.06.37 PM.jpeg",
     features: [
       "CAD design and 3D modeling",
       "Rapid prototyping and testing",
@@ -27,7 +27,7 @@ const engineeringServices = [
   {
     title: "Custom Fixture & Tooling Design",
     description: "Custom-designed fixtures and tooling solutions to optimize manufacturing processes and ensure consistent component quality for enhanced production efficiency.",
-    image: "/src/assets/componets/3.Oct 25/cent_fixture/WhatsApp Image 2025-10-27 at 3.21.23 PM.jpeg",
+    image: "/assets/componets/3-Oct-25/cent_fixture/WhatsApp Image 2025-10-27 at 3.21.23 PM.jpeg",
     features: [
       "Custom fixture design and manufacturing",
       "Specialized tooling development",
@@ -38,7 +38,7 @@ const engineeringServices = [
   {
     title: "Quality Control Excellence",
     description: "Advanced quality inspection and testing protocols ensuring every component meets exact specifications and industry standards for automotive and aerospace applications.",
-    image: "/src/assets/componets/Part - Photos/IMG-20250519-WA0016.jpg",
+    image: "/assets/componets/Part-Photos/IMG-20250519-WA0016.jpg",
     features: [
       "Dimensional inspection and verification",
       "Material testing and certification",
@@ -54,14 +54,14 @@ export default function PrecisionEngineering() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative py-20 bg-industrial-dark text-white overflow-hidden">
+      <section className="relative bg-industrial-dark text-white overflow-hidden pt-24 pb-16 sm:pt-32 sm:pb-24">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10 pointer-events-none">
           <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(to_right,#4fd3d4_1px,transparent_1px),linear-gradient(to_bottom,#4fd3d4_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
         </div>
         
         <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
+          <div className="max-w-4xl mx-auto text-center space-y-6 mt-8">
             <h1 className="text-5xl md:text-6xl font-bold leading-tight">
               Engineering Precision with Cost Focus
             </h1>
@@ -78,7 +78,7 @@ export default function PrecisionEngineering() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Our Engineering Capabilities
+              Our Engineering Services
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Comprehensive engineering solutions focused on cost optimization and manufacturing excellence.

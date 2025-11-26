@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Card } from "./ui/card";
 import { Button } from "./ui/button";
+import { Recaptcha } from "./ui/recaptcha";
 import { 
   Mail, 
   Phone, 
@@ -15,21 +16,21 @@ import {
   ArrowRight,
   Globe,
   Linkedin,
-  Twitter
+  Twitter,
 } from "lucide-react";
 
 const contactMethods = [
   {
     icon: Phone,
     title: "Phone",
-    details: "+91 (555) 123-4567",
+    details: "+91 83444 74556",
     description: "Speak directly with our team",
     action: "Call Now"
   },
   {
     icon: Mail,
-    title: "Email",
-    details: "hello@emuski.com",
+    title: "General Inquiries",
+    details: "enquiries@emuski.com",
     description: "Send us a detailed message",
     action: "Email Us"
   },
@@ -53,8 +54,8 @@ const offices = [
   {
     city: "Headquarters & Manufacturing",
     address: "Rudhra Coworks - Coworking Space\n126, RNS Plaza, KIADB Industrial Area, 1\nnear Tech Mahindra Gate, next to Hyderabad Magic\nElectronic City Phase 2\nBengaluru, Karnataka 560100",
-    phone: "+91 (555) 123-4567",
-    email: "hello@emuski.com",
+    phone: "+91 83444 74556",
+    email: "enquiries@emuski.com",
     mapUrl: "https://maps.google.com/maps?q=Rudhra+Coworks+Electronic+City+Phase+2+Bangalore+126+RNS+Plaza+KIADB+Industrial+Area+near+Tech+Mahindra+Gate+next+to+Hyderabad+Magic+Bengaluru+Karnataka+560100&t=&z=15&ie=UTF8&iwloc=&output=embed"
   }
 ];
@@ -73,6 +74,8 @@ export const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+
 
   useEffect(() => {
     document.title = "Contact EMUSKI | Get In Touch - Manufacturing Solutions";
@@ -94,19 +97,74 @@ export const Contact = () => {
     }));
   };
 
+
+  const sendEmail = async (data: any, type: 'contact' | 'quote') => {
+    // Email configuration
+    const emailData = {
+      to: 'abushan.isro@gmail.com',
+      from: 'noreply@emuski.com',
+      subject: type === 'contact' ? `New Contact Form Submission - ${data.subject}` : `New Quote Request - ${data.projectDescription}`,
+      html: type === 'contact' ? `
+        <h2>New Contact Form Submission</h2>
+        <p><strong>Name:</strong> ${data.name}</p>
+        <p><strong>Email:</strong> ${data.email}</p>
+        <p><strong>Company:</strong> ${data.company || 'Not provided'}</p>
+        <p><strong>Title:</strong> ${data.title || 'Not provided'}</p>
+        <p><strong>Phone:</strong> ${data.phone || 'Not provided'}</p>
+        <p><strong>Project Type:</strong> ${data.projectType || 'Not specified'}</p>
+        <p><strong>Timeline:</strong> ${data.timeline || 'Not specified'}</p>
+        <p><strong>Subject:</strong> ${data.subject}</p>
+        <p><strong>Message:</strong></p>
+        <p>${data.message}</p>
+        <p><strong>Submitted:</strong> ${new Date().toLocaleString()}</p>
+      ` : `
+        <h2>New Quote Request</h2>
+        <p><strong>Name:</strong> ${data.name}</p>
+        <p><strong>Email:</strong> ${data.email}</p>
+        <p><strong>Company:</strong> ${data.company || 'Not provided'}</p>
+        <p><strong>Phone:</strong> ${data.phone || 'Not provided'}</p>
+        <p><strong>Quantity:</strong> ${data.quantity || 'Not specified'}</p>
+        <p><strong>Timeline:</strong> ${data.timeline || 'Not specified'}</p>
+        <p><strong>Project Description:</strong></p>
+        <p>${data.projectDescription}</p>
+        <p><strong>Files Attached:</strong> ${data.attachmentCount || 0}</p>
+        <p><strong>Submitted:</strong> ${new Date().toLocaleString()}</p>
+      `
+    };
+
+    // For now, we'll store in localStorage and log the email data
+    // In production, you would integrate with an email service like SendGrid, EmailJS, or Nodemailer
+    console.log('📧 EMAIL TO SEND TO abushan.isro@gmail.com:', emailData);
+    
+    // You can integrate with EmailJS here:
+    // const result = await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', emailData, 'YOUR_USER_ID');
+    
+    return Promise.resolve({ success: true });
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Check if reCAPTCHA is verified
+    if (!recaptchaToken) {
+      setSubmitStatus("error");
+      setTimeout(() => setSubmitStatus("idle"), 5000);
+      return;
+    }
+    
     setIsSubmitting(true);
     
     try {
-      // Simulate API call - replace with your actual endpoint
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // Send email notification
+      await sendEmail(formData, 'contact');
       
       // Store in localStorage as fallback
       const contacts = JSON.parse(localStorage.getItem("emuski_contacts") || "[]");
+
       const newContact = {
         id: Date.now().toString(),
         ...formData,
+        recaptchaToken,
         timestamp: new Date().toISOString(),
         status: "new"
       };
@@ -126,6 +184,7 @@ export const Contact = () => {
         projectType: "",
         timeline: ""
       });
+      setRecaptchaToken(null);
     } catch (error) {
       setSubmitStatus("error");
     } finally {
@@ -144,46 +203,13 @@ export const Contact = () => {
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-4 sm:space-y-6">
             <span className="text-white/80 text-sm font-semibold tracking-wider uppercase">Get In Touch</span>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
-              Contact <span className="text-white/80">Us</span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold" style={{color: 'rgb(18, 26, 33)'}}>
+              Contact Us
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-white/90 leading-relaxed">
               Ready to transform your manufacturing? Let's discuss how we can help bring your vision to life.
             </p>
             <div className="h-1 w-16 sm:w-20 md:w-24 bg-white rounded-full mx-auto"></div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Methods */}
-      <section className="py-16 sm:py-20 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12 sm:mb-16">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mt-2">How to Reach Us</h2>
-              <p className="text-lg sm:text-xl text-gray-600 mt-4">
-                Choose the method that works best for you. We're here to help.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-              {contactMethods.map((method, index) => {
-                const Icon = method.icon;
-                return (
-                  <Card key={index} className="p-6 sm:p-8 text-center border-2 border-gray-200 hover:border-emuski-teal hover:bg-emuski-teal/5 transition-all duration-300 group">
-                    <div className="w-14 h-14 sm:w-16 sm:h-16 bg-emuski-teal/10 group-hover:bg-emuski-teal rounded-full flex items-center justify-center mx-auto mb-6 transition-colors">
-                      <Icon className="h-7 w-7 sm:h-8 sm:w-8 text-emuski-teal group-hover:text-white transition-colors" />
-                    </div>
-                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">{method.title}</h3>
-                    <p className="font-semibold text-emuski-teal mb-2 text-sm sm:text-base">{method.details}</p>
-                    <p className="text-gray-600 text-sm mb-4">{method.description}</p>
-                    <Button variant="outline" size="sm" className="group-hover:border-emuski-teal group-hover:text-emuski-teal">
-                      {method.action}
-                    </Button>
-                  </Card>
-                );
-              })}
-            </div>
           </div>
         </div>
       </section>
@@ -347,6 +373,7 @@ export const Contact = () => {
                     />
                   </div>
 
+
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       Project Timeline
@@ -366,10 +393,20 @@ export const Contact = () => {
                     </select>
                   </div>
 
+                  {/* reCAPTCHA */}
+                  <div>
+                    <Recaptcha 
+                      onVerify={setRecaptchaToken}
+                      onError={() => setRecaptchaToken(null)}
+                      theme="light"
+                      size="normal"
+                    />
+                  </div>
+
                   <Button 
                     type="submit"
-                    disabled={isSubmitting || submitStatus === "success"}
-                    className="w-full bg-emuski-teal hover:bg-emuski-teal/90 text-white font-semibold py-3 sm:py-4 text-base sm:text-lg"
+                    disabled={isSubmitting || submitStatus === "success" || !recaptchaToken}
+                    className="w-full bg-emuski-teal hover:bg-emuski-teal/90 text-white font-semibold py-3 sm:py-4 text-base sm:text-lg disabled:bg-gray-400 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
                       "Sending..."
@@ -397,7 +434,10 @@ export const Contact = () => {
                   {submitStatus === "error" && (
                     <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
                       <p className="text-red-800 text-sm">
-                        Sorry, there was an error sending your message. Please try again or contact us directly.
+                        {!recaptchaToken 
+                          ? "Please complete the security verification before submitting the form."
+                          : "Sorry, there was an error sending your message. Please try again or contact us directly."
+                        }
                       </p>
                     </div>
                   )}
@@ -451,7 +491,7 @@ export const Contact = () => {
                       allowFullScreen
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      title="EMuski Office Location - Rudhra Coworks, Electronic City Phase 2, Bangalore"
+                      title="EMUSKI Office Location - Rudhra Coworks, Electronic City Phase 2, Bangalore"
                       className="w-full h-full"
                     ></iframe>
                   </div>
@@ -486,6 +526,39 @@ export const Contact = () => {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Methods */}
+      <section className="py-16 sm:py-20 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mt-2">How to Reach Us</h2>
+              <p className="text-lg sm:text-xl text-gray-600 mt-4">
+                Choose the method that works best for you. We're here to help.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
+              {contactMethods.map((method, index) => {
+                const Icon = method.icon;
+                return (
+                  <Card key={index} className="p-6 sm:p-8 text-center border-2 border-gray-200 hover:border-emuski-teal hover:bg-emuski-teal/5 transition-all duration-300 group relative hover:shadow-lg">
+                    <div className="w-14 h-14 sm:w-16 sm:h-16 bg-emuski-teal/10 group-hover:bg-emuski-teal rounded-full flex items-center justify-center mx-auto mb-6 transition-colors duration-300">
+                      <Icon className="h-7 w-7 sm:h-8 sm:w-8 text-emuski-teal group-hover:text-white transition-colors duration-300" />
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 group-hover:text-gray-900 transition-colors duration-300">{method.title}</h3>
+                    <p className="font-semibold text-emuski-teal mb-2 text-sm sm:text-base group-hover:text-emuski-teal transition-colors duration-300">{method.details}</p>
+                    <p className="text-gray-600 text-sm mb-4 group-hover:text-gray-700 transition-colors duration-300">{method.description}</p>
+                    <Button variant="outline" size="sm" className="group-hover:border-emuski-teal group-hover:text-emuski-teal group-hover:bg-white transition-all duration-300">
+                      {method.action}
+                    </Button>
+                  </Card>
+                );
+              })}
             </div>
           </div>
         </div>

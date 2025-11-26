@@ -1,20 +1,23 @@
-import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { ChevronLeft, ChevronRight, Linkedin } from 'lucide-react';
 
 const growthStories = [
   {
-    value: "5+",
-    label: "Industries",
-    category: "Our Reach",
-    description: "Delivering precision manufacturing excellence across automotive, aerospace, medical devices, and industrial sectors.",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&q=80",
+    value: "SINGARAVELAN SRINIVASAN",
+    label: "Founder & CEO @EMUSKI",
+    category: "Leadership",
+    description: "Striving for Value-Driven Empowerment",
+    image: "/founder.jpg",
+    linkedinUrl: "https://www.linkedin.com/in/singaravelan-srinivasan-emuski/",
+    isFounder: true,
+    location: "Bengaluru, Karnataka, India",
   },
   {
-    value: "30+",
-    label: "Clients",
-    category: "Our Partnerships",
-    description: "Trusted manufacturing partner for leading OEMs delivering critical project solutions with engineering excellence.",
-    image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&q=80",
+    value: "30+ Clients | 5+ Industries",
+    label: "Strategic Partnerships",
+    category: "Our Reach",
+    description: "Trusted manufacturing partner for leading OEMs across automotive, aerospace, medical devices, and industrial sectors delivering critical project solutions with engineering excellence.",
+    image: "/assets/componets/Matica-Photos2/DSC_1008.JPG",
   },
   {
     value: "50+",
@@ -22,14 +25,14 @@ const growthStories = [
     sublabel: "In Engineering Service", 
     category: "Our Expertise",
     description: "Complex engineering projects delivered from concept to completion with precision and cost optimization.",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&q=80",
+    image: "/assets/componets/forus/WhatsApp Image 2025-08-23 at 10.06.37 PM.jpeg",
   },
   {
     value: "850+",
     label: "Components Manufactured",
     category: "Our Production",
     description: "High-precision components manufactured to demanding specifications across diverse industrial applications.",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80",
+    image: "/assets/componets/Part-Photos/IMG-20250519-WA0016.jpg",
   }
 ];
 
@@ -37,6 +40,94 @@ const AboutSection = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const itemsPerView = window.innerWidth < 1024 ? 1 : 3;
     const maxIndex = Math.max(0, growthStories.length - itemsPerView);
+    const [animatedValues, setAnimatedValues] = useState<{ [key: number]: number }>({});
+    const [hasAnimated, setHasAnimated] = useState(false);
+    const achievementsRef = useRef<HTMLDivElement>(null);
+
+    // Define specific achievements for the container
+    const achievementsData = [
+        {
+            value: "5+",
+            number: 5,
+            label: "Industries",
+            category: "Our Reach"
+        },
+        {
+            value: "30+",
+            number: 30,
+            label: "Clients", 
+            category: "Strategic Partnerships"
+        },
+        {
+            value: "50+",
+            number: 50,
+            label: "Individual Projects",
+            sublabel: "In Engineering Service",
+            category: "Our Expertise"
+        },
+        {
+            value: "850+",
+            number: 850,
+            label: "Components Manufactured",
+            category: "Our Production"
+        }
+    ];
+
+    // Extract numbers from achievement values for animation
+    const getNumberFromValue = (achievement: any): number => {
+        return achievement.number || 0;
+    };
+
+    // Animate number counting
+    const animateNumber = (finalValue: number, index: number, duration: number = 2000) => {
+        const startTime = Date.now();
+        const startValue = 0;
+
+        const animate = () => {
+            const elapsed = Date.now() - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+            const currentValue = Math.floor(startValue + (finalValue - startValue) * easeOutQuart);
+
+            setAnimatedValues(prev => ({ ...prev, [index]: currentValue }));
+
+            if (progress < 1) {
+                requestAnimationFrame(animate);
+            }
+        };
+
+        requestAnimationFrame(animate);
+    };
+
+    // Intersection Observer for triggering animation
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting && !hasAnimated) {
+                        setHasAnimated(true);
+                        achievementsData.forEach((achievement, index) => {
+                            const finalNumber = getNumberFromValue(achievement);
+                            setTimeout(() => {
+                                animateNumber(finalNumber, index, 2000 + index * 200);
+                            }, index * 100);
+                        });
+                    }
+                });
+            },
+            { threshold: 0.3 }
+        );
+
+        if (achievementsRef.current) {
+            observer.observe(achievementsRef.current);
+        }
+
+        return () => {
+            if (achievementsRef.current) {
+                observer.unobserve(achievementsRef.current);
+            }
+        };
+    }, [hasAnimated]);
 
     const nextSlide = () => {
         setCurrentIndex(prev => Math.min(prev + 1, maxIndex));
@@ -61,19 +152,19 @@ const AboutSection = () => {
                     {/* Left Side - Title and Description */}
                     <div className="lg:col-span-1 space-y-4">
                         <h2 className="text-3xl font-bold text-white">
-                            About EMuski
+                            About EMUSKI
                         </h2>
                         <p className="text-gray-300 leading-relaxed">
-                            At EMuski, we are shaping the future of manufacturing by combining engineering expertise, manufacturing expertise, and AI-driven excellence. Our unique strengths that we have put in the intersection of innovation, intelligence, and implementation—directly serving OEMs. Our New Product Development (NPD) Center integrates design, engineering, and in-house production, enabling faster prototyping to solutions, self-controlled product launches. This holistic approach ensures OEMs to move from concept to market with confidence and agility.
+                            One stop solution for OEM Manufacturing - You Design It, We Build It. From concept to production, we deliver precision engineering and manufacturing excellence for OEMs across industries.
                         </p>
                         <div className="mt-6 p-4 bg-gray-800/30 rounded-lg border border-emuski-teal/20">
                             <h4 className="text-lg font-semibold text-emuski-teal mb-3">Technology-Driven Engineering, Manufacturing & Digital Excellence</h4>
                             <p className="text-sm text-gray-300 italic mb-3">"Empowering OEMs with intelligence, agility, and precision across the product lifecycle"</p>
                             <p className="text-sm text-gray-300 leading-relaxed">
-                                At EMuski, we combine engineering expertise, manufacturing mastery, and AI-driven digital innovation to support OEMs at every stage of their manufacturing lifecycle. Our services includes from design engineering to end-to-end value, cost efficiency, and speed to market.
+                                At EMUSKI, we combine engineering expertise, manufacturing mastery, and AI-driven digital innovation to support OEMs at every stage of their manufacturing lifecycle. Our services includes from design engineering to end-to-end value, cost efficiency, and speed to market.
                             </p>
                             <div className="mt-4 text-center">
-                                <p className="text-sm text-emuski-teal font-medium">"At EMuski, where cost and quality meets profitability in manufacturing"</p>
+                                <p className="text-sm text-emuski-teal font-medium">"At EMUSKI, where cost and quality meets profitability in manufacturing"</p>
                             </div>
                         </div>
                     </div>
@@ -119,19 +210,48 @@ const AboutSection = () => {
                                                 </div>
                                                 
                                                 <div className="p-4">
-                                                    <div className="flex items-center space-x-2 mb-3">
-                                                        <span className="text-xs font-medium text-gray-700 uppercase tracking-wider">{story.category}</span>
-                                                        <span className="text-gray-300">|</span>
-                                                        <span className="text-xs font-medium text-gray-700 uppercase tracking-wider">Milestone</span>
+                                                    
+                                                    <div className="flex items-start justify-between mb-2">
+                                                        <div className="flex-1">
+                                                            {story.isFounder ? (
+                                                                <>
+                                                                    <h3 className="text-base font-bold text-gray-900 leading-tight mb-1">
+                                                                        {story.value}
+                                                                    </h3>
+                                                                    <p className="text-sm font-semibold text-emuski-teal mb-1">
+                                                                        {story.label}
+                                                                    </p>
+                                                                    {story.location && (
+                                                                        <p className="text-xs text-gray-500 mb-2">
+                                                                            {story.location}
+                                                                        </p>
+                                                                    )}
+                                                                </>
+                                                            ) : (
+                                                                <h3 className="text-lg font-bold text-gray-900 leading-tight">
+                                                                    {story.value} {story.label}
+                                                                </h3>
+                                                            )}
+                                                        </div>
+                                                        {story.linkedinUrl && (
+                                                            <a 
+                                                                href={story.linkedinUrl}
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                                className="inline-flex items-center justify-center w-8 h-8 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition-colors ml-2 flex-shrink-0"
+                                                                onClick={(e) => e.stopPropagation()}
+                                                                title="View LinkedIn Profile"
+                                                            >
+                                                                <Linkedin className="h-4 w-4" />
+                                                            </a>
+                                                        )}
                                                     </div>
                                                     
-                                                    <h3 className="text-lg font-bold text-gray-900 mb-2 leading-tight">
-                                                        {story.value} {story.label}
-                                                    </h3>
-                                                    
-                                                    <p className="text-sm text-gray-600 leading-relaxed">
-                                                        {story.description}
-                                                    </p>
+                                                    {story.description && (
+                                                        <p className="text-sm text-gray-600 leading-relaxed mb-3">
+                                                            {story.description}
+                                                        </p>
+                                                    )}
                                                 </div>
                                             </a>
                                         </div>
@@ -161,33 +281,45 @@ const AboutSection = () => {
                     </div>
                 </div>
                 {/* Achievements Section - Both Mobile and Desktop */}
-                <div className="mt-8 lg:mt-12">
+                <div className="mt-8 lg:mt-12" ref={achievementsRef}>
                     <h3 className="text-xl lg:text-2xl font-bold text-white mb-6 text-center">Our Achievements</h3>
                     
                     {/* Desktop Achievements - Horizontal Layout */}
-                    <div className="hidden lg:grid lg:grid-cols-4 gap-8">
-                        {growthStories.map((story, index) => (
-                            <div key={index} className="text-center bg-gray-800/30 p-6 rounded-lg border border-emuski-teal/20 hover:bg-gray-800/50 transition-all duration-300">
-                                <div className="text-3xl xl:text-4xl font-bold text-emuski-teal mb-2">{story.value}</div>
-                                <div className="text-sm font-medium text-gray-300 mb-1">{story.label}</div>
-                                {story.sublabel && (
-                                    <div className="text-xs text-gray-400">{story.sublabel}</div>
-                                )}
-                            </div>
-                        ))}
+                    <div className="hidden lg:grid lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                        {achievementsData.map((story, index) => {
+                            const animatedValue = animatedValues[index] || 0;
+                            const suffix = story.value.includes('+') ? '+' : '';
+                            return (
+                                <div key={index} className="text-center bg-gray-800/30 p-6 rounded-lg border border-emuski-teal/20 hover:bg-gray-800/50 transition-all duration-300">
+                                    <div className="text-3xl xl:text-4xl font-bold text-emuski-teal mb-2">
+                                        {animatedValue}{suffix}
+                                    </div>
+                                    <div className="text-sm font-medium text-gray-300 mb-1">{story.label}</div>
+                                    {story.sublabel && (
+                                        <div className="text-xs text-gray-400">{story.sublabel}</div>
+                                    )}
+                                </div>
+                            );
+                        })}
                     </div>
                     
                     {/* Mobile Achievements - 2x2 Grid */}
                     <div className="lg:hidden grid grid-cols-2 gap-4">
-                        {growthStories.map((story, index) => (
-                            <div key={index} className="bg-gray-800/50 p-4 rounded-lg border border-emuski-teal/20">
-                                <span className="text-xl sm:text-2xl font-bold text-emuski-teal block">{story.value}</span>
-                                <p className="text-xs sm:text-sm text-gray-300">{story.label}</p>
-                                {story.sublabel && (
-                                    <p className="text-xs text-gray-400">{story.sublabel}</p>
-                                )}
-                            </div>
-                        ))}
+                        {achievementsData.map((story, index) => {
+                            const animatedValue = animatedValues[index] || 0;
+                            const suffix = story.value.includes('+') ? '+' : '';
+                            return (
+                                <div key={index} className="bg-gray-800/50 p-4 rounded-lg border border-emuski-teal/20 text-center">
+                                    <span className="text-xl sm:text-2xl font-bold text-emuski-teal block">
+                                        {animatedValue}{suffix}
+                                    </span>
+                                    <p className="text-xs sm:text-sm text-gray-300">{story.label}</p>
+                                    {story.sublabel && (
+                                        <p className="text-xs text-gray-400">{story.sublabel}</p>
+                                    )}
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
             </div>
