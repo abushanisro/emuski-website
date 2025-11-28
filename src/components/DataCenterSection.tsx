@@ -117,10 +117,7 @@ export const DataCenterSection = () => {
   };
 
   return (
-    <>
-      <div className="h-16" />
-
-      <section className="py-16 bg-secondary/30">
+    <section className="py-16 bg-secondary/30" style={{ marginTop: '0' }}>
         <div className="container mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
             {/* Left Side - Title and Description */}
@@ -241,6 +238,5 @@ export const DataCenterSection = () => {
             </div>
         </div>
       </section>
-    </>
   );
 };

@@ -99,7 +99,8 @@ export const NewsCarousel = () => {
           </div>
         </div>
         
-        <style jsx>{`
+        <style dangerouslySetInnerHTML={{
+          __html: `
           @keyframes scroll {
             0% {
               transform: translateX(0);
@@ -111,7 +112,8 @@ export const NewsCarousel = () => {
           .animate-scroll {
             animation: scroll 30s linear infinite;
           }
-        `}</style>
+          `
+        }} />
       </section>
 
       <section className="py-12 border-b border-border relative overflow-hidden bg-white">

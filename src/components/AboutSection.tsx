@@ -199,69 +199,67 @@ const AboutSection = () => {
                             >
                                 {growthStories.map((story, index) => (
                                     <div key={index} className="w-full lg:w-1/3 flex-shrink-0 px-2">
-                                        <div className="bg-white rounded-lg shadow-sm border border-gray-200 hover:border-emuski-teal/50 transition-all duration-300 h-full group overflow-hidden">
-                                            <a href="#" className="block h-full hover:no-underline">
-                                                <div className="relative h-48 overflow-hidden">
-                                                    <img
-                                                        src={story.image}
-                                                        alt={story.label}
-                                                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                                                    />
-                                                </div>
+                                        <div className="bg-white rounded-lg shadow-sm border border-gray-200 hover:border-emuski-teal/50 transition-all duration-300 h-full group overflow-hidden cursor-pointer">
+                                            <div className="relative h-48 overflow-hidden">
+                                                <img
+                                                    src={story.image}
+                                                    alt={story.label}
+                                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                                />
+                                            </div>
+                                            
+                                            <div className="p-4">
                                                 
-                                                <div className="p-4">
-                                                    
-                                                    <div className="flex items-start justify-between mb-2">
-                                                        <div className="flex-1">
-                                                            {story.isFounder ? (
-                                                                <>
-                                                                    <h3 className="text-base font-bold text-gray-900 leading-tight mb-1">
-                                                                        {story.value}
-                                                                    </h3>
-                                                                    <p className="text-sm font-semibold text-emuski-teal-darker mb-1">
-                                                                        {story.label}
-                                                                    </p>
-                                                                    {story.location && (
-                                                                        <p className="text-xs text-gray-500 mb-2">
-                                                                            {story.location}
-                                                                        </p>
-                                                                    )}
-                                                                </>
-                                                            ) : (
-                                                                <h3 className="text-lg font-bold text-gray-900 leading-tight">
-                                                                    {story.value} {story.label}
+                                                <div className="flex items-start justify-between mb-2">
+                                                    <div className="flex-1">
+                                                        {story.isFounder ? (
+                                                            <>
+                                                                <h3 className="text-base font-bold text-gray-900 leading-tight mb-1">
+                                                                    {story.value}
                                                                 </h3>
-                                                            )}
-                                                        </div>
-                                                        {story.linkedinUrl && (
-                                                            <a 
-                                                                href={story.linkedinUrl}
-                                                                target="_blank"
-                                                                rel="noopener noreferrer"
-                                                                className="inline-flex items-center justify-center w-8 h-8 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition-colors ml-2 flex-shrink-0"
-                                                                onClick={(e) => e.stopPropagation()}
-                                                                title="View LinkedIn Profile"
-                                                            >
-                                                                <Linkedin className="h-4 w-4" />
-                                                            </a>
+                                                                <p className="text-sm font-semibold text-emuski-teal-darker mb-1">
+                                                                    {story.label}
+                                                                </p>
+                                                                {story.location && (
+                                                                    <p className="text-xs text-gray-500 mb-2">
+                                                                        {story.location}
+                                                                    </p>
+                                                                )}
+                                                            </>
+                                                        ) : (
+                                                            <h3 className="text-lg font-bold text-gray-900 leading-tight">
+                                                                {story.value} {story.label}
+                                                            </h3>
                                                         )}
                                                     </div>
-                                                    
-                                                    {story.description && (
-                                                        <p className="text-sm text-gray-600 leading-relaxed mb-3">
-                                                            {story.isFounder ? (
-                                                                <span className="relative">
-                                                                    <span className="text-xl text-gray-600 opacity-70 mr-1">"</span>
-                                                                    <span className="italic">Striving for Value-Driven Empowerment</span>
-                                                                    <span className="text-xl text-gray-600 opacity-70 ml-1">"</span>
-                                                                </span>
-                                                            ) : (
-                                                                story.description
-                                                            )}
-                                                        </p>
+                                                    {story.linkedinUrl && (
+                                                        <a 
+                                                            href={story.linkedinUrl}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="inline-flex items-center justify-center w-8 h-8 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition-colors ml-2 flex-shrink-0"
+                                                            onClick={(e) => e.stopPropagation()}
+                                                            title="View LinkedIn Profile"
+                                                        >
+                                                            <Linkedin className="h-4 w-4" />
+                                                        </a>
                                                     )}
                                                 </div>
-                                            </a>
+                                                
+                                                {story.description && (
+                                                    <p className="text-sm text-gray-600 leading-relaxed mb-3">
+                                                        {story.isFounder ? (
+                                                            <span className="relative">
+                                                                <span className="text-xl text-gray-600 opacity-70 mr-1">"</span>
+                                                                <span className="italic">Striving for Value-Driven Empowerment</span>
+                                                                <span className="text-xl text-gray-600 opacity-70 ml-1">"</span>
+                                                            </span>
+                                                        ) : (
+                                                            story.description
+                                                        )}
+                                                    </p>
+                                                )}
+                                            </div>
                                         </div>
                                     </div>
                                 ))}

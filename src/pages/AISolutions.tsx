@@ -29,6 +29,7 @@ const AISolutions = () => {
                 Next-Gen AI - Mithran
               </h1>
               
+              
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
                 AI-powered intelligence for smarter product development, supply chain, and cost optimization.
               </p>
