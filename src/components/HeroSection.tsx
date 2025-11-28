@@ -97,7 +97,7 @@ export const HeroSection = () => {
   };
 
   return (
-    <section className="relative w-full h-[60vh] sm:h-screen">
+    <section className="relative w-full h-[80vh] sm:h-screen">
       {/* Slides */}
       {slides.map((slide, index) => (
         <div
@@ -106,10 +106,10 @@ export const HeroSection = () => {
             }`}
         >
           {/* Mobile Layout - Text overlay on image */}
-          <div className="sm:hidden h-full">
+          <div className="sm:hidden h-full min-h-[80vh]">
             {/* Mobile Background Image */}
             <div 
-              className="absolute inset-0 w-full h-full bg-no-repeat bg-center bg-cover"
+              className="absolute inset-0 w-full h-full min-h-[80vh] bg-no-repeat bg-center bg-cover"
               style={{
                 backgroundImage: `url(${slide.mobileImage})`,
                 backgroundPosition: 'center center',
