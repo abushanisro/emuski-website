@@ -1,6 +1,6 @@
 import { Linkedin, Instagram, Twitter, BookOpen } from 'lucide-react';
 
-const emuskiLogo = "/Emuski Logo.svg";
+const emuskiLogo = "/assets/emuskilogo.webp";
 
 export const Footer = () => {
   return (

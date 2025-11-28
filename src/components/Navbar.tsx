@@ -2,7 +2,7 @@ import { Menu, Home, ChevronDown } from "lucide-react";
 import { Button } from "./ui/button";
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
-const emuskiLogo = "/Emuski Logo.svg";
+const emuskiLogo = "/assets/emuskilogo.webp";
 
 interface NavItem {
   name: string;
