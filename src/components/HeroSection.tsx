@@ -314,7 +314,7 @@ export const HeroSection = () => {
                     Manufacturing Excellence
                   </div>
                   <div className={`text-sm font-semibold transition-colors ${1 === currentSlide ? "text-white" : "text-white group-hover:text-gray-200"}`}>
-                    Rapid Prototyping
+                    On-Demand
                   </div>
                 </div>
               </button>
